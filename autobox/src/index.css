@@ -1,7 +1,15 @@
+@font-face {
+  font-family: 'Roboto-Black';
+  src: url('Components/UI/Fonts/Roboto/Roboto-Black.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Roboto-Black', sans-serif;
 }
 
 a {
@@ -10,4 +18,25 @@ a {
 
 li {
   list-style: none;
+}
+
+/* Имплементировать копирование содержимого при нажатии + hover animation*/
+
+.textWhiteSmall {
+  color: #fff;
+  font-size: 20px;
+}
+
+.textWhiteBig {
+  color: #fff;
+  font-size: 40px;
+}
+
+/* Имплементировать копирование содержимого при нажатии + hover animation*/
+
+.centered {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }

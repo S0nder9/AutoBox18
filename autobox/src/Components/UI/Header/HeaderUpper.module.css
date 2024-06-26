@@ -1,0 +1,17 @@
+.headerContainer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: calc(100% - 30%);
+    background-color: #000;
+    border-radius: 8px;
+    padding: 2px;
+    height: 50px;
+    margin: 5px;
+}
+
+.iconContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
