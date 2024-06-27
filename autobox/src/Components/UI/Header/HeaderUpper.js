@@ -3,6 +3,7 @@ import { Helmet } from "react-helmet";
 import styles from "./HeaderUpper.module.css";
 
 const HeaderUpper = () => {
+
     return (
         <div className = "centered">
             <Helmet>
