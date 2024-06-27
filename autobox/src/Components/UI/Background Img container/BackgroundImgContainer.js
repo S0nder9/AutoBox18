@@ -7,7 +7,6 @@ const BackgroundImgContainer = (props) => {
     const borderRadius = props.borderRadius || "0";
 
 
-
     return (
         <div
             className={`${styles.BackgroundImgContainer} "centered`}

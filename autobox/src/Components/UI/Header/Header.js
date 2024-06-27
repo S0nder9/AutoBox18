@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./Header.module.css";
 import Enrol from "../Buttons/Enrol";
 import useHideHeader from "../../../Hooks/useHideHeader";
-import Logo from "../Images/ComponentsImg/Logo";
+import Logo from "../ComponentsImg/Logo";
 
 const Header = () => {
     const isScrolled = useHideHeader();

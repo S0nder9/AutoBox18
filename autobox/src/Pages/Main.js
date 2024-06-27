@@ -7,13 +7,14 @@ import Enrol from "../Components/UI/Buttons/Enrol";
 import styles from "./Main.module.css";
 import HeavyTextGray from "../Components/UI/Text/HeavyTextGray";
 import PicesAndServicesCard from "../Components/UI/Cards/PicesAndServicesCard";
+import Footer from "../Components/UI/Footer/Footer";
 
 
 function Main() {
     return (
         <React.Fragment>
             <header>
-                <BackgroundImgContainer url="https://хорошийсервис.рф/wp-content/uploads/2018/03/services1.jpg" height="100vh">
+               <BackgroundImgContainer url="https://24tv.ua/resources/photos/news/201801/911234.jpg?v=1661280443000" height="100vh">
                     <HeaderUpper />
                     <Header />
                     <div className="centered" style={{ height: "60%" }}>
@@ -36,22 +37,22 @@ function Main() {
 
                     <div className={styles.picesAndServices}>
                         <PicesAndServicesCard
-                            backgroundImageUrl="https://img.freepik.com/free-photo/close-up-on-adorable-kitten-outdoors_23-2150782405.jpg"
+                            backgroundImageUrl="https://24tv.ua/resources/photos/news/201801/911234.jpg?v=1661280443000"
                             text="ДИАГНОСТИКА"
                         />
 
                         <PicesAndServicesCard
-                            backgroundImageUrl="https://img.freepik.com/free-photo/close-up-on-adorable-kitten-outdoors_23-2150782405.jpg"
+                            backgroundImageUrl="https://24tv.ua/resources/photos/news/201801/911234.jpg?v=1661280443000"
                             text="ТЕХ. ОБСЛУЖИВАНИЕ"
                         />
 
                         <PicesAndServicesCard
-                            backgroundImageUrl="https://img.freepik.com/free-photo/close-up-on-adorable-kitten-outdoors_23-2150782405.jpg"
+                            backgroundImageUrl="https://24tv.ua/resources/photos/news/201801/911234.jpg?v=1661280443000"
                             text="РЕМОНТ ХОДОВОЙ"
                         />
 
                         <PicesAndServicesCard
-                            backgroundImageUrl="https://img.freepik.com/free-photo/close-up-on-adorable-kitten-outdoors_23-2150782405.jpg"
+                            backgroundImageUrl="https://24tv.ua/resources/photos/news/201801/911234.jpg?v=1661280443000"
                             text="РЕМОНТ ДВС, КПП, АКПП"
                         />
                     </div>
@@ -61,14 +62,14 @@ function Main() {
                     <div className="centered">
                         <HeavyTextGray text="КАК ДОЕХАТЬ" margin="20px" color="#514F4F" fontSize="50px" />
                     </div>
-                    <BackgroundImgContainer url="https://хорошийсервис.рф/wp-content/uploads/2018/03/services1.jpg" height="64vh">
+                    <BackgroundImgContainer url="https://хорошийсервис.рф/wp-content/uploads/2018/03/services1.jpg" height="55vh">
                         <div className={styles.howToGo}>
 
                             
                              <BackgroundImgContainer
-                              url="https://img.freepik.com/free-photo/close-up-on-adorable-kitten-outdoors_23-2150782405.jpg" 
-                              height="60vh" 
-                              width = "80%" 
+                              url="https://24tv.ua/resources/photos/news/201801/911234.jpg?v=1661280443000" 
+                              height="50vh" 
+                              width = "100%" 
                               borderRadius = "20px"
                               >
 
@@ -79,9 +80,9 @@ function Main() {
                             
 
                              <BackgroundImgContainer 
-                             url="https://img.freepik.com/free-photo/close-up-on-adorable-kitten-outdoors_23-2150782405.jpg" 
-                             height="60vh" 
-                             width = "80%" 
+                             url="https://24tv.ua/resources/photos/news/201801/911234.jpg?v=1661280443000" 
+                             height="50vh" 
+                             width = "100%" 
                              borderRadius = "20px"
                              />
                             
@@ -90,6 +91,10 @@ function Main() {
                     </BackgroundImgContainer>
                 </div>
             </main>
+
+            <footer>
+                <Footer/>
+            </footer>
         </React.Fragment>
     )
 }
