@@ -27,6 +27,16 @@ li {
   font-size: 20px;
 }
 
+.textGraySmall {
+  color: rgb(81, 79, 79);
+  font-size: 20px;
+}
+
+.textDarkSmall {
+  color: rgba(255, 255, 255, 0.54);
+  font-size: 20px;
+}
+
 .textWhiteBig {
   color: #fff;
   font-size: 30px;
@@ -54,5 +64,9 @@ li {
 }
 
 .logo {
+  width: 100px;
+}
+
+.logoStyles {
   width: 100px;
 }

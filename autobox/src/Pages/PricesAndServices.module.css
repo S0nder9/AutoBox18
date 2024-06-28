@@ -1,0 +1,10 @@
+.containerForCards {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 100%;
+    padding: 5px;
+    gap: 10px;
+    flex-direction: row;
+}

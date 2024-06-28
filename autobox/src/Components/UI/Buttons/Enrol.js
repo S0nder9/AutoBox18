@@ -5,7 +5,7 @@ const Enrol = (props) => {
     // Имплементировать открытие окна
     return (
         <>
-            <button className={styles.button}>{props.text}</button>
+           <button className={styles.button}>{props.text}</button>
         </>
     )
 }

@@ -8,13 +8,16 @@ import styles from "./Main.module.css";
 import HeavyTextGray from "../Components/UI/Text/HeavyTextGray";
 import PicesAndServicesCard from "../Components/UI/Cards/PicesAndServicesCard";
 import Footer from "../Components/UI/Footer/Footer";
+import MainImg from "../Images/ImportantImages/Фото на главном меню.png";
 
 
 function Main() {
     return (
         <React.Fragment>
+            {/* <header style={{backgroundImage: `url("${MainImg}")`}}> */}
             <header>
-               <BackgroundImgContainer url="https://24tv.ua/resources/photos/news/201801/911234.jpg?v=1661280443000" height="100vh">
+
+               <BackgroundImgContainer url={MainImg} height="100vh">
                     <HeaderUpper />
                     <Header />
                     <div className="centered" style={{ height: "60%" }}>
@@ -22,7 +25,7 @@ function Main() {
                     </div>
 
                     <div className={styles.enrolsPosition}>
-                        <Enrol text="Запись онлайн" />
+                        <Enrol text="Запись онлайн"/>
                         <Enrol text="Написать" />
                     </div>
 
@@ -37,22 +40,22 @@ function Main() {
 
                     <div className={styles.picesAndServices}>
                         <PicesAndServicesCard
-                            backgroundImageUrl="https://24tv.ua/resources/photos/news/201801/911234.jpg?v=1661280443000"
+                            backgroundImageUrl="https://хорошийсервис.рф/wp-content/uploads/2018/03/services1.jpg"
                             text="ДИАГНОСТИКА"
                         />
 
                         <PicesAndServicesCard
-                            backgroundImageUrl="https://24tv.ua/resources/photos/news/201801/911234.jpg?v=1661280443000"
                             text="ТЕХ. ОБСЛУЖИВАНИЕ"
+                            backgroundImageUrl="https://хорошийсервис.рф/wp-content/uploads/2018/03/services1.jpg"
                         />
 
                         <PicesAndServicesCard
-                            backgroundImageUrl="https://24tv.ua/resources/photos/news/201801/911234.jpg?v=1661280443000"
+                            backgroundImageUrl="https://хорошийсервис.рф/wp-content/uploads/2018/03/services1.jpg"
                             text="РЕМОНТ ХОДОВОЙ"
                         />
 
                         <PicesAndServicesCard
-                            backgroundImageUrl="https://24tv.ua/resources/photos/news/201801/911234.jpg?v=1661280443000"
+                            backgroundImageUrl="https://хорошийсервис.рф/wp-content/uploads/2018/03/services1.jpg"
                             text="РЕМОНТ ДВС, КПП, АКПП"
                         />
                     </div>
@@ -62,12 +65,12 @@ function Main() {
                     <div className="centered">
                         <HeavyTextGray text="КАК ДОЕХАТЬ" margin="20px" color="#514F4F" fontSize="50px" />
                     </div>
-                    <BackgroundImgContainer url="https://хорошийсервис.рф/wp-content/uploads/2018/03/services1.jpg" height="55vh">
+                    <BackgroundImgContainer url="https://хорошийсервис.рф/wp-content/uploads/2018/03/services1.jpg" height="55vh" backgroundAttachment = "fixed">
                         <div className={styles.howToGo}>
 
                             
                              <BackgroundImgContainer
-                              url="https://24tv.ua/resources/photos/news/201801/911234.jpg?v=1661280443000" 
+                              url="https://хорошийсервис.рф/wp-content/uploads/2018/03/services1.jpg" 
                               height="50vh" 
                               width = "100%" 
                               borderRadius = "20px"
@@ -80,7 +83,7 @@ function Main() {
                             
 
                              <BackgroundImgContainer 
-                             url="https://24tv.ua/resources/photos/news/201801/911234.jpg?v=1661280443000" 
+                             url="https://хорошийсервис.рф/wp-content/uploads/2018/03/services1.jpg" 
                              height="50vh" 
                              width = "100%" 
                              borderRadius = "20px"

@@ -1,4 +1,5 @@
 import Enrol from "../Buttons/Enrol";
+import EnrolNavigator from "../Buttons/EnrolNavigator";
 import styles from "./PicesAndServicesCard.module.css";
 
 const PicesAndServicesCard = (props) => {
@@ -7,7 +8,7 @@ const PicesAndServicesCard = (props) => {
     return (
         <div className={styles.cardStyles} style={{backgroundImage: `url(${backgroundImageUrl})`,}}>
             <p className="textWhiteBig">{props.text}</p>
-            <Enrol text = "ПОДРОБНЕЕ"/>
+            <EnrolNavigator text = "ПОДРОБНЕЕ" to = "/pricesAndServices"/>
         </div>
     )
 }
