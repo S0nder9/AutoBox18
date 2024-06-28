@@ -32,6 +32,11 @@ li {
   font-size: 20px;
 }
 
+.textGrayHeavy {
+  color: rgb(81, 79, 79);
+  font-size: 45px;
+}
+
 .textDarkSmall {
   color: rgba(255, 255, 255, 0.54);
   font-size: 20px;
