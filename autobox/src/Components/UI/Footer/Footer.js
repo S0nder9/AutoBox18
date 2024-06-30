@@ -7,9 +7,9 @@ import Line from "../Line/Line"
 const Footer = () => {
     return (
         <>
-          <Helmet>
+          {/* <Helmet>
             <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
-        </Helmet>
+        </Helmet> */}
 
         <div className={styles.entry}>
             <Enrol text = "ЗАПИСЬ ОНЛАЙН"/>

@@ -6,9 +6,9 @@ import SocialIcons from "../../Icons/SocialIcons";
 const HeaderUpper = () => {
   return (
     <div className="centered">
-      <Helmet>
+      {/* <Helmet>
         <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
-      </Helmet>
+      </Helmet> */}
       <div className={styles.headerContainer}>
         <p className="textWhiteSmall">8(3412)56-76-15</p>
         <p className="textWhiteSmall">Маяковского, 11</p>

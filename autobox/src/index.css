@@ -47,6 +47,11 @@ li {
   font-size: 30px;
 }
 
+.textBlackBig {
+  color: #000000;
+  font-size: 30px;
+}
+
 .textWhiteHeavy {
   color: #fff;
   font-size: 45px;
