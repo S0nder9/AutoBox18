@@ -1,0 +1,18 @@
+.headerWrapper {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: calc(100% - 30%);
+    height: auto;
+    padding: 20px;
+    transition: margin 0.3s ease;
+    border-bottom: 1px white solid;
+    
+}
+
+.mainWrapperForHeader {
+    display: flex;
+    justify-content: space-around;
+    transition: background-color 0.3s ease, margin 0.3s ease;
+    z-index: 10;
+}
