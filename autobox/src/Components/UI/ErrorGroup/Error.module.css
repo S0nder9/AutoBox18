@@ -1,0 +1,51 @@
+.popup {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  min-width: 250px;
+  max-width: 300px;
+  border-radius: 8px;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.popup.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.popup.hide {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.error {
+  background: rgba(255, 0, 0, 0.8);
+  border: 2px solid rgba(255, 0, 0, 0.5);
+}
+
+.success {
+  background: rgba(0, 255, 0, 0.8);
+  border: 2px solid rgba(0, 255, 0, 0.5);
+}
+
+.popupContent {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+
+.message {
+  flex: 1;
+  margin-left: 10px;
+}
+
+.closeButton {
+  cursor: pointer;
+  margin-left: 10px;
+}

@@ -1,4 +1,3 @@
-import Enrol from "../Buttons/Enrol";
 import EnrolNavigator from "../Buttons/EnrolNavigator";
 import styles from "./PicesAndServicesCard.module.css";
 

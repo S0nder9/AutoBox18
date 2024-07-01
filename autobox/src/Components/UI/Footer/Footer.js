@@ -1,4 +1,3 @@
-import { Helmet } from "react-helmet";
 import SocialIcons from "../../Icons/SocialIcons";
 import Enrol from "../Buttons/Enrol";
 import styles from "./Footer.module.css";

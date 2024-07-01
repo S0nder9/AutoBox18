@@ -2,6 +2,7 @@ import React from "react";
 import styles from "./WindowForPricesAndServices.module.css";
 import useHttp from "../../../Hooks/useHttp";
 import { Link, useParams } from "react-router-dom/cjs/react-router-dom.min";
+import Loading from "../LoadingGroup/Loading";
 
 const WindowForPricesAndServices = () => {
   const { id } = useParams();
@@ -13,7 +14,7 @@ const WindowForPricesAndServices = () => {
     }
   );
 
-  if (loader) return <p>Loading...</p>;
+  if (loader) return <div className="centered" style={{height: "100vh"}}><Loading/></div>;
   if (error) return <p>Error: {error}</p>;
   
   if (!data || !data[id]) {

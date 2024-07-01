@@ -1,5 +1,4 @@
 import React from "react";
-import { Helmet } from "react-helmet";
 import styles from "./HeaderUpper.module.css";
 import SocialIcons from "../../Icons/SocialIcons";
 

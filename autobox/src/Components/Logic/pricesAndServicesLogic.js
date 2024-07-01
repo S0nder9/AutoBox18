@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import PicesAndServicesCardWithTheMove from "../UI/Cards/PicesAndServicesCardWithTheMove";
 import TestImg from "./Group 3.jpg";
 import useHttp from "../../Hooks/useHttp";
+import Loading from "../UI/LoadingGroup/Loading";
 
 const PricesAndServicesLogic = () => {
   const { data, loader, error } = useHttp(
@@ -12,7 +13,7 @@ const PricesAndServicesLogic = () => {
     }
   );
 
-  if (loader) return <p>Loading...</p>;
+  if (loader) return <div className="centered"><Loading/></div>;
   if (error) return <p>Error: {error}</p>;
 
   const arrayForPricesAndServices = data
