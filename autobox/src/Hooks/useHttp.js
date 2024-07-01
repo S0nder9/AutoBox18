@@ -41,7 +41,7 @@ const useHttp = (databaseLink, propertyObject) => {
         };
 
         fetchData();
-    }, [databaseLink, propertyObject]);
+    }, []);
 
     return { data, loader, error };
 };
