@@ -3,6 +3,7 @@ import styles from "./WindowForPricesAndServices.module.css";
 import useHttp from "../../../Hooks/useHttp";
 import { Link, useParams } from "react-router-dom/cjs/react-router-dom.min";
 import Loading from "../LoadingGroup/Loading";
+import ErrorPopup from "../ErrorGroup/ErrorPopup";
 
 const WindowForPricesAndServices = () => {
   const { id } = useParams();
@@ -15,10 +16,10 @@ const WindowForPricesAndServices = () => {
   );
 
   if (loader) return <div className="centered" style={{height: "100vh"}}><Loading/></div>;
-  if (error) return <p>Error: {error}</p>;
+  if (error) return <ErrorPopup timeOut = "5000" message = {error}/>;
   
   if (!data || !data[id]) {
-    return <p>Нет доступных данных</p>;
+    return <ErrorPopup timeOut = "5000" message = "Нет доступных данных"/>;;
   }
 
 return (

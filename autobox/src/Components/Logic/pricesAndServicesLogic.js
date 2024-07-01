@@ -4,6 +4,7 @@ import PicesAndServicesCardWithTheMove from "../UI/Cards/PicesAndServicesCardWit
 import TestImg from "./Group 3.jpg";
 import useHttp from "../../Hooks/useHttp";
 import Loading from "../UI/LoadingGroup/Loading";
+import ErrorPopup from "../UI/ErrorGroup/ErrorPopup";
 
 const PricesAndServicesLogic = () => {
   const { data, loader, error } = useHttp(
@@ -14,7 +15,7 @@ const PricesAndServicesLogic = () => {
   );
 
   if (loader) return <div className="centered"><Loading/></div>;
-  if (error) return <p>Error: {error}</p>;
+  if (error) return <ErrorPopup timeOut = "5000" message = {error}/>;
 
   const arrayForPricesAndServices = data
     ? Object.entries(data).map(([key, value]) => ({ id: key, ...value }))
