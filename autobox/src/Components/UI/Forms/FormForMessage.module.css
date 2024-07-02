@@ -1,0 +1,26 @@
+
+.form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.privacyContainer {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.checkbox {
+    margin-right: 10px;
+}
+
+.privacyText {
+    font-size: 16px;
+}
+
+.spanColor {
+    color: #FF5C00;
+}

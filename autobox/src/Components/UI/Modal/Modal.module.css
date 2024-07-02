@@ -1,0 +1,64 @@
+.zModalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 11;
+}
+
+.modalContent {
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    min-width: 350px;
+    width: 700px;
+    height: auto;
+    max-width: 100%;
+    position: relative;
+    text-align: center;
+}
+
+.closeButton {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.tabContainer {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.tabButton {
+    flex: 1;
+    padding: 10px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.activeTab {
+    color: #FF5C00;
+    font-weight: bold;
+}
+
+
+.submitButton {
+    background: orange;
+    color: white;
+    padding: 20px 40px 20px 40px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}

@@ -32,30 +32,6 @@ const PricesAndServices = () => {
                     </div>
 
                     <div className={styles.containerForCards}>
-                        {/* <PicesAndServicesCardWithTheMove 
-                        backgroundImageUrl = {MainImg} 
-                        textBig = "ДИАГНОСТИКА АВТОМОБИЛЯ"
-                        textSmall = "Нажмите, чтобы узнать больше информации"
-                        />
-
-                        <PicesAndServicesCardWithTheMove 
-                        backgroundImageUrl = {MainImg} 
-                        textBig = "ТЕХНИЧЕСКОЕ ОБСЛУЖИВАНИЕ"
-                        textSmall = "Нажмите, чтобы узнать больше информации"
-                        />
-
-                        <PicesAndServicesCardWithTheMove 
-                        backgroundImageUrl = {MainImg} 
-                        textBig = "РЕМОНТ ХОДОВОЙ"
-                        textSmall = "Нажмите, чтобы узнать больше информации"
-                        />
-
-                        <PicesAndServicesCardWithTheMove 
-                        backgroundImageUrl = {MainImg} 
-                        textBig = "РЕМОНТ ДВС, КПП, АКПП"
-                        textSmall = "Нажмите, чтобы узнать больше информации"
-                        /> */}
-
                         <PricesAndServicesLogic/>
                     </div>
                 </div>

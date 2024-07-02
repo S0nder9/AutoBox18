@@ -1,12 +1,14 @@
 import { configureStore } from "@reduxjs/toolkit";
-import togglePricesAndServicesSlice from "./Slices/togglePricesAndServicesSlice";
+import entrySlice from "./Slices/entrySlice";
 import openWindowPricesAndServicesSlice from "./Slices/openWindowPricesAndServicesSlice";
+import changeColorState from "./Slices/changeColorSlice";
 
 const store = configureStore({
-    reducer: {
-        togglePricesAndServices: togglePricesAndServicesSlice,
-        openWindowPricesAndServices: openWindowPricesAndServicesSlice
-    }
+  reducer: {
+    entrySlice,
+    changeColorState,
+    openWindowPricesAndServices: openWindowPricesAndServicesSlice
+  }
 });
 
 export default store;
