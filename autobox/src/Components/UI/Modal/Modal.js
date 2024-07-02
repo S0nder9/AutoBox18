@@ -23,8 +23,6 @@ const Modal = ({ onClose, children }) => {
                 </div>
 
                 {colorState ? <FormForMessage /> : <FormForCall />}
-                
-                <button type="submit" className={styles.submitButton}><span className='textWhiteSmall'>ОТПРАВИТЬ ЗАЯВКУ</span></button>
 
                 {children}
             </div>

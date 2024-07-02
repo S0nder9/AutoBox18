@@ -24,3 +24,22 @@
 .spanColor {
     color: #FF5C00;
 }
+
+.tabButton {
+    flex: 1;
+    padding: 10px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.submitButton {
+    background: orange;
+    color: white;
+    padding: 20px 40px 20px 40px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
