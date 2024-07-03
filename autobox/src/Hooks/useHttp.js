@@ -8,7 +8,6 @@ const useHttp = (databaseLink, propertyObject) => {
     useEffect(() => {
         const fetchData = async () => {
             setLoader(true);
-            console.log('Fetching data...');
             try {
                 const options = {
                     method: propertyObject.method,
@@ -29,13 +28,10 @@ const useHttp = (databaseLink, propertyObject) => {
                 }
 
                 const data = await response.json();
-                console.log('Data fetched:', data);
                 setData(data);
             } catch (error) {
-                console.error('Error fetching data:', error);
                 setError(error.message);
             } finally {
-                console.log('Fetch complete');
                 setLoader(false);
             }
         };
