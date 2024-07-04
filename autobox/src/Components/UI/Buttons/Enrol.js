@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import styles from "./Enrol.module.css";
 import { entrySliceClose, entrySliceOpen } from "../../../Store/Slices/entrySlice";
@@ -6,11 +6,13 @@ import Modal from "../Modal/Modal";
 import BcModal from "../Modal/BcModal";
 
 const Enrol = (props) => {
+    const [anim, setAnim] = useState(false);
     const openModalWindow = useSelector(state => state.entrySlice.entrySliceOpenState);
     const dispatch = useDispatch();
+    
 
     const animationActivationHandler = () => {
-        dispatch(entrySliceClose());
+        setAnim(true);
     };
 
     return (
@@ -19,7 +21,7 @@ const Enrol = (props) => {
                 {props.text}
             </button>
             {openModalWindow && (
-                <Modal onClose={() => dispatch(entrySliceClose())}>
+                <Modal onClose={() => dispatch(entrySliceClose())} >
                     <BcModal onClick={animationActivationHandler} />
                 </Modal>
             )}

@@ -4,6 +4,7 @@
 // import ErrorPopup from "../ErrorGroup/ErrorPopup";
 // import SuccessPopup from "../ErrorGroup/SuccessPopup";
 // import useValidForm from "../../../Hooks/useValidForm";
+// import useHttp from "../../../Hooks/useHttp";
 
 // const FormForCall = ({ display }) => {
 //     const [errors, setErrors] = useState([]);
@@ -28,19 +29,17 @@
 //         }
 //     }, [refName.current?.value, refPhone.current?.value]);
 
-//     // Обработчик изменения состояния чекбокса
 //     const handleCheckboxChange = (e) => {
 //         setIsChecked(e.target.checked);
 //     };
 
-//     // Проверяем данные и отправляем сообщение
 //     const sentDataHandler = (e) => {
 //         e.preventDefault();
 //         const newErrors = [];
 
-//         if (!isNameNotEmpty) {
-//             newErrors.push("Укажите имя");
-//         }
+//         // if (!isNameNotEmpty) {
+//         //     newErrors.push("Укажите имя");
+//         // }
 
 //         if (!isPhoneNumberValid) {
 //             newErrors.push("Укажите номер телефона");
@@ -61,47 +60,54 @@
 //         }
 //     };
 
+//     const { data } = useHttp("https://autobox18-ba317-default-rtdb.firebaseio.com/BotToken.json", { method: "GET" });
+
 //     const sentDataToTelegramHandler = async () => {
-//         const botToken = '7442718434:AAGyH4vpMGhtYcmMkQJA506EnH6KpM0A6zY';
-//         const chatId = '1345888410';
+//         if (!data) {
+//             setErrorStateForTg(true);
+//             return;
+//         }
+
+//         const botToken = data.Token;
+//         const chatId = data.ChatId;
+//         const url = `${data.UrlPart1}${botToken}${data.UrlPart2}`;
+
 //         const text = `
 //         <b>У вас новая запись, перезвоните:</b>\n\n
 //         <b>Имя:</b> ${refNameValue || 'Не указано'}\n
-//         <b>Номер телефона:</b> ${refPhoneValue || 'Не указан'}
+//         <b>Номер телефона:</b> <a href="tel:${refPhoneValue}">${refPhoneValue}</a>
 //         `;
-//         const url = `https://api.telegram.org/bot${botToken}/sendMessage`;
-      
+
 //         try {
-//           const response = await fetch(url, {
-//             method: 'POST',
-//             headers: {
-//                 'Content-Type': 'application/json',
-//             },
-//             body: JSON.stringify({
-//                 chat_id: chatId,
-//                 text: text,
-//                 parse_mode: 'HTML',
-//             }),
-//           });
-      
-//           if (!response.ok) {
-//             setErrorStateForTg(true);
-//           } else {
-//             setErrorStateForTg(false);
-//           }
+//             const response = await fetch(url, {
+//                 method: 'POST',
+//                 headers: {
+//                     'Content-Type': 'application/json',
+//                 },
+//                 body: JSON.stringify({
+//                     chat_id: chatId,
+//                     text: text,
+//                     parse_mode: 'HTML',
+//                 }),
+//             });
+
+//             if (!response.ok) {
+//                 setErrorStateForTg(true);
+//             } else {
+//                 setErrorStateForTg(false);
+//             }
 //         } catch (error) {
-//           console.error('Ошибка при отправке сообщения в Telegram:', error);
-//           setErrorStateForTg(true);
+//             console.error('Ошибка при отправке сообщения в Telegram:', error);
+//             setErrorStateForTg(true);
 //         }
-//       };
-      
+//     };
 
 //     return (
 //         <>
 //             {errors.map((error, index) => (
 //                 <ErrorPopup key={index} timeOut="5000" message={error} />
 //             ))}
-            
+
 //             {errorStateForTg && <ErrorPopup timeOut="5000" message="Произошла какая-то ошибка при отправке данных" />}
 //             {errorStateForTg === false && <SuccessPopup timeOut="5000" message={successMessage} />}
 
@@ -150,8 +156,6 @@
 
 // export default FormForCall;
 
-
-
 import { Link } from "react-router-dom";
 import styles from "./FormForCall.module.css";
 import { useRef, useState, useEffect } from "react";
@@ -191,10 +195,6 @@ const FormForCall = ({ display }) => {
         e.preventDefault();
         const newErrors = [];
 
-        if (!isNameNotEmpty) {
-            newErrors.push("Укажите имя");
-        }
-
         if (!isPhoneNumberValid) {
             newErrors.push("Укажите номер телефона");
         }
@@ -214,49 +214,54 @@ const FormForCall = ({ display }) => {
         }
     };
 
-    const { data, loader, error } = useHttp("https://autobox18-ba317-default-rtdb.firebaseio.com/BotToken.json", { method: "GET" });
-
-    const botToken = data?.Token;
-    const chatId = data?.ChatId;
-    const url = `${data?.UrlPart1}${botToken}${data?.UrlPart2}`;
+    const { data } = useHttp("https://autobox18-ba317-default-rtdb.firebaseio.com/BotToken.json", { method: "GET" });
 
     const sentDataToTelegramHandler = async () => {
+        if (!data) {
+            setErrorStateForTg(true);
+            return;
+        }
+
+        const botToken = data.Token;
+        const chatId = data.ChatId;
+        const url = `${data.UrlPart1}${botToken}${data.UrlPart2}`;
+
         const text = `
         <b>У вас новая запись, перезвоните:</b>\n\n
         <b>Имя:</b> ${refNameValue || 'Не указано'}\n
-        <b>Номер телефона:</b> ${refPhoneValue || 'Не указан'}
+        <b>Номер телефона:</b> <a href="tel:${refPhoneValue || 'Не указан'}">${refPhoneValue || 'Не указан'}</a>
         `;
-      
+
         try {
-          const response = await fetch(url, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({
-                chat_id: chatId,
-                text: text,
-                parse_mode: 'HTML',
-            }),
-          });
-      
-          if (!response.ok) {
-            setErrorStateForTg(true);
-          } else {
-            setErrorStateForTg(false);
-          }
+            const response = await fetch(url, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    chat_id: chatId,
+                    text: text,
+                    parse_mode: 'HTML',
+                }),
+            });
+
+            if (!response.ok) {
+                setErrorStateForTg(true);
+            } else {
+                setErrorStateForTg(false);
+            }
         } catch (error) {
-          console.error('Ошибка при отправке сообщения в Telegram:', error);
-          setErrorStateForTg(true);
+            console.error('Ошибка при отправке сообщения в Telegram:', error);
+            setErrorStateForTg(true);
         }
-      };
+    };
 
     return (
         <>
             {errors.map((error, index) => (
                 <ErrorPopup key={index} timeOut="5000" message={error} />
             ))}
-            
+
             {errorStateForTg && <ErrorPopup timeOut="5000" message="Произошла какая-то ошибка при отправке данных" />}
             {errorStateForTg === false && <SuccessPopup timeOut="5000" message={successMessage} />}
 
@@ -273,7 +278,7 @@ const FormForCall = ({ display }) => {
 
                 <input
                     placeholder="ВВЕДИТЕ НОМЕР ТЕЛЕФОНА *"
-                    type="text"
+                    type="number"
                     name="number"
                     className="input"
                     ref={refPhone}
@@ -295,7 +300,14 @@ const FormForCall = ({ display }) => {
                     </label>
                 </div>
 
-                <button type="submit" className={styles.submitButton}>
+                <button 
+                type="submit" 
+                className={styles.submitButton} 
+                disabled={errorStateForTg === false} 
+                style={{
+                    backgroundColor: errorStateForTg === false ? "red" : "",
+                    cursor: errorStateForTg === false ? "not-allowed" : ""
+                }}>
                     <span className='textWhiteSmall'>ОТПРАВИТЬ ЗАЯВКУ</span>
                 </button>
             </form>
@@ -304,3 +316,4 @@ const FormForCall = ({ display }) => {
 };
 
 export default FormForCall;
+

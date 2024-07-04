@@ -18,8 +18,13 @@ const Modal = ({ onClose, children }) => {
 
                 <p className="textBlackBig">ЗАПИСЬ</p>
                 <div className={styles.tabContainer}>
-                    <button className={`${styles.tabButton} ${!colorState && styles.activeTab}`} onClick={() => dispatch(changeState())}>ЗАКАЗАТЬ ЗВОНОК</button>
-                    <button className={`${styles.tabButton} ${colorState && styles.activeTab}`} onClick={() => dispatch(changeState())}>НАПИСАТЬ НАМ</button>
+                    <button 
+                    className={`${styles.tabButton} ${!colorState && styles.activeTab}`} 
+                    onClick={() => dispatch(changeState())}>ЗАКАЗАТЬ ЗВОНОК</button>
+
+                    <button 
+                    className={`${styles.tabButton} ${colorState && styles.activeTab}`} 
+                    onClick={() => dispatch(changeState())}>НАПИСАТЬ НАМ</button>
                 </div>
 
                 {colorState ? <FormForMessage /> : <FormForCall />}
