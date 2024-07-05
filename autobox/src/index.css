@@ -37,6 +37,11 @@ li {
   font-size: 20px;
 }
 
+.textGrayMedium {
+  color: rgb(81, 79, 79);
+  font-size: 25px;
+}
+
 .textGrayHeavy {
   color: rgb(81, 79, 79);
   font-size: 45px;
@@ -58,51 +63,84 @@ li {
 }
 
 /* Hover for header */
-.cta {
+
+.buttonHover {
+  font-size: 24px;
+  color: #fff;
+  cursor: pointer;
   position: relative;
-  margin: auto;
-  padding: 12px 18px;
-  transition: all 0.2s ease;
   border: none;
   background: none;
-  cursor: pointer;
+  text-transform: uppercase;
+  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition-duration: 400ms;
+  transition-property: color;
 }
 
-.cta:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  display: block;
-  border-radius: 50px;
-  background: #ffd102;
-  width: 45px;
-  height: 45px;
-  transition: all 0.3s ease;
+.buttonHover:focus,
+.buttonHover:hover {
+  color: #fff;
 }
 
-.cta span {
-  position: relative;
-  font-family: "Ubuntu", sans-serif;
-  font-size: 18px;
-  font-weight: 700;
-  letter-spacing: 0.05em;
-  color: #234567;
-}
-
-.cta:hover:before {
+.buttonHover:focus:after,
+.buttonHover:hover:after {
   width: 100%;
-  background: #b1dae7;
+  left: 0%;
 }
 
-.cta:hover svg {
-  transform: translateX(0);
+.buttonHover:after {
+  content: "";
+  pointer-events: none;
+  bottom: -2px;
+  left: 50%;
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background-color: #fff;
+  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition-duration: 400ms;
+  transition-property: width, left;
 }
 
-.cta:active {
-  transform: scale(0.95);
+
+
+.buttonHoverBlack {
+  font-size: 24px;
+  color: #000000;
+  cursor: pointer;
+  position: relative;
+  border: none;
+  background: none;
+  text-transform: uppercase;
+  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition-duration: 400ms;
+  transition-property: color;
 }
 
+.buttonHoverBlack:focus,
+.buttonHoverBlack:hover {
+  color: #000000;
+}
+
+.buttonHoverBlack:focus:after,
+.buttonHoverBlack:hover:after {
+  width: 100%;
+  left: 0%;
+}
+
+.buttonHoverBlack:after {
+  content: "";
+  pointer-events: none;
+  bottom: -2px;
+  left: 50%;
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background-color: #000000;
+  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition-duration: 400ms;
+  transition-property: width, left;
+}
 /* Hover for header */
 
 /* Styles for Input */
@@ -166,5 +204,11 @@ li {
 }
 
 .logoStyles {
-  width: 100px;
+  width: 50px;
+  transform: scale(2.5);
+}
+
+
+.leaflet-control-attribution {
+  display: none;
 }

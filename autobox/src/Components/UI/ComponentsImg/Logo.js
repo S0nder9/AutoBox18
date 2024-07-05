@@ -1,7 +1,7 @@
-// import LogoImg from "./L/LogoBlack.png";
+import LogoImg from "./L/LogoOrange.png";
 
 function Logo() {
-    return <img src="" alt="Логотип" className="logoStyles"/>
+    return <img src={LogoImg} alt="Логотип" className="logoStyles"/>
 }
 
 export default Logo;

@@ -3,6 +3,7 @@ import styles from "./Header.module.css";
 import Enrol from "../Buttons/Enrol";
 import useHideHeader from "../../../Hooks/useHideHeader";
 import Logo from "../ComponentsImg/Logo";
+import { Link } from "react-router-dom/cjs/react-router-dom.min";
 
 const Header = () => {
     const isScrolled = useHideHeader();
@@ -28,17 +29,28 @@ const Header = () => {
                         boxShadow: isScrolled ? '3px 4px 2px #dad9d9' : '0px 0px 0px #fff'
                     }}
                 >
-                    <Logo />
-                    {/* <p className="textWhiteBig" style={{color: isScrolled ? "black" : ""}}>цены и услуги</p> */}
+                    <Link to="/main">
+                        <Logo />
+                    </Link>
 
-                    <button class="cta">
-                        <span>запчасти</span>
-                        <svg width="15px" height="10px" viewBox="0 0 13 10">
-                        </svg>
-                    </button>
+                    <Link to = "/pricesAndServices">
+                        <button className={isScrolled ? "buttonHoverBlack" : "buttonHover"}>
+                            цены и услуги
+                        </button>
+                    </Link>
 
-                    <p className="textWhiteBig" style={{ color: isScrolled ? "black" : "" }}>запчасти</p>
-                    <p className="textWhiteBig" style={{ color: isScrolled ? "black" : "" }}>контакты</p>
+                    <a href="http://xn--18-6kcipah3a9amjv.xn--p1ai/novosti/my-otkryli-avtoservis" target="_blank">
+                        <button className={isScrolled ? "buttonHoverBlack" : "buttonHover"}>
+                            запчасти
+                        </button>
+                    </a>
+
+                    <Link to = "/contacts">
+                        <button className={isScrolled ? "buttonHoverBlack" : "buttonHover"}>
+                        контакты
+                        </button>
+                    </Link>
+
                     <Enrol text="Записаться" />
                 </div>
 
