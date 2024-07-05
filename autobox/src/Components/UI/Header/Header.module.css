@@ -14,5 +14,5 @@
     display: flex;
     justify-content: space-around;
     transition: background-color 0.3s ease, margin 0.3s ease;
-    z-index: 1000;
+    z-index: 10;
 }

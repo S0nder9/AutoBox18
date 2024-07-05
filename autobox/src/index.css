@@ -212,3 +212,11 @@ li {
 .leaflet-control-attribution {
   display: none;
 }
+
+.leaflet-pane {
+  z-index: 8 !important;
+}
+
+.leaflet-top, .leaflet-bottom {
+  z-index: 8 !important;
+}
