@@ -1,6 +1,6 @@
 import React from "react";
 import BackgroundImgContainer from "../Components/UI/Background Img container/BackgroundImgContainer";
-import MainImgForContacts from "../Images/ImportantImages/Фото местоположения сервиса.jpg";
+import MainImgForContacts from "../Images/ImportantImages/Контакты.png";
 import HeaderUpper from "../Components/UI/Header/HeaderUpper";
 import Header from "../Components/UI/Header/Header";
 import HeavyText from "../Components/UI/Text/HeavyText";

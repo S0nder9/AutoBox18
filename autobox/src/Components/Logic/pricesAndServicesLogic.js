@@ -1,7 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import PicesAndServicesCardWithTheMove from "../UI/Cards/PicesAndServicesCardWithTheMove";
-import TestImg from "./Group 3.jpg";
+import img0 from "../../Images/ImportantImages/Для карточки 1.png";
+import img1 from "../../Images/ImportantImages/Для карточки 2.png";
+import img2 from "../../Images/ImportantImages/Для карточки 3.png";
+import img3 from "../../Images/ImportantImages/Для карточки 4.png";
+
 import useHttp from "../../Hooks/useHttp";
 import Loading from "../UI/LoadingGroup/Loading";
 import ErrorPopup from "../UI/ErrorGroup/ErrorPopup";
@@ -15,11 +19,18 @@ const PricesAndServicesLogic = () => {
   );
 
   if (loader) return <div className="centered"><Loading/></div>;
-  if (error) return <ErrorPopup timeOut = "5000" message = {error}/>;
+  if (error) return <ErrorPopup timeOut="5000" message={error}/>;
 
   const arrayForPricesAndServices = data
     ? Object.entries(data).map(([key, value]) => ({ id: key, ...value }))
     : [];
+
+  const imageMap = {
+    0: img0,
+    1: img1,
+    2: img2,
+    3: img3
+  };
 
   return (
     <>
@@ -28,7 +39,7 @@ const PricesAndServicesLogic = () => {
           <PicesAndServicesCardWithTheMove
             textBig={item.textBig}
             textSmall="Нажмите, чтобы узнать больше информации"
-            backgroundImageUrl={TestImg}
+            backgroundImageUrl={imageMap[item.id]}
           />
         </Link>
       ))}

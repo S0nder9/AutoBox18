@@ -23,7 +23,7 @@ const WindowForPricesAndServices = () => {
   }
 
 return (
-    <>
+    <div className={styles.container}>
 
       <div className={styles.locationDiv}>
         
@@ -112,7 +112,7 @@ return (
         </div>
       </div>
     
-    </>
+    </div>
   );
 
 };

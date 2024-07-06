@@ -43,11 +43,11 @@
     flex-direction: row;
     flex-wrap: wrap;
     gap: 20px;
-    background-color: #00000036;
+    background-color: #ebe9e9;
   backdrop-filter: blur(10px); 
   -webkit-backdrop-filter: blur(20px);
   padding: 20px;
-  border-radius: 10px;
+  border-radius: 16px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
@@ -56,7 +56,6 @@
     justify-content: center;
     align-items: center;
     width: 100%;
-    margin: 20px 0 0 0;
 }
 
 .wrapperColumes {
@@ -66,3 +65,17 @@
     justify-content: center;
     gap: 40px;
 }
+
+/* For container */
+
+.container {
+    width: 100%;
+    height: 100vh;
+    --color: rgba(114, 114, 114, 0.3);
+    background-color: #191a1a;
+    background-image: linear-gradient(0deg, transparent 24%, var(--color) 25%, var(--color) 26%, transparent 27%,transparent 74%, var(--color) 75%, var(--color) 76%, transparent 77%,transparent),
+    linear-gradient(90deg, transparent 24%, var(--color) 25%, var(--color) 26%, transparent 27%,transparent 74%, var(--color) 75%, var(--color) 76%, transparent 77%,transparent);
+    background-size: 55px 55px;
+  }
+
+/* For container */

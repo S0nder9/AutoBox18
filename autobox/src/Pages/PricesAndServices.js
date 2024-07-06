@@ -1,5 +1,5 @@
 import React from "react";
-import MainImg from "../Images/ImportantImages/Фото на главном меню.png";
+import MainImg from "../Images/ImportantImages/Цены и услуги.png";
 import BackgroundImgContainer from "../Components/UI/Background Img container/BackgroundImgContainer";
 import HeaderUpper from "../Components/UI/Header/HeaderUpper";
 import Header from "../Components/UI/Header/Header";

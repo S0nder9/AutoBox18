@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./BackgroundImgContainer.module.css";
+import { Link } from "react-router-dom/cjs/react-router-dom.min";
 
 const BackgroundImgContainer = (props) => {
     const height = props.height || "100vh";

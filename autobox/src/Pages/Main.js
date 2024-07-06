@@ -9,15 +9,37 @@ import HeavyTextGray from "../Components/UI/Text/HeavyTextGray";
 import PicesAndServicesCard from "../Components/UI/Cards/PicesAndServicesCard";
 import Footer from "../Components/UI/Footer/Footer";
 import MainImg from "../Images/ImportantImages/Фото на главном меню.png";
+import CardImg1 from "../Images/ImportantImages/Для карточки 1.png";
+import CardImg2 from "../Images/ImportantImages/Для карточки 2.png";
+import CardImg3 from "../Images/ImportantImages/Для карточки 3.png";
+import CardImg4 from "../Images/ImportantImages/Для карточки 4.png";
+import MainImg2 from "../Images/ImportantImages/Фото на главном меню 2.png";
+import AutoBox18Photo from "../Images/ImportantImages/Фото сервиса.jpg";
+import useLeafletMap from "../Hooks/useLeafletMap";
 
 
 function Main() {
+
+    const center = [56.828478, 53.200163];
+    const zoom = 13;
+    const height = "50vh";
+    const width = "80%";
+    // const iconUrl = logoIcon;
+
+    const markers = [
+        {
+            position: center,
+            popup: 'Маяковского, 11. Автобокс 18'
+        }
+    ];
+
+    const LeafletMap = useLeafletMap(center, zoom, height, width, markers);
+
     return (
         <React.Fragment>
-            {/* <header style={{backgroundImage: `url("${MainImg}")`}}> */}
             <header>
 
-               <BackgroundImgContainer url={MainImg} height="100vh">
+                <BackgroundImgContainer url={MainImg} height="100vh">
                     <HeaderUpper />
                     <Header />
                     <div className="centered" style={{ height: "60%" }}>
@@ -25,7 +47,7 @@ function Main() {
                     </div>
 
                     <div className={styles.enrolsPosition}>
-                        <Enrol text="Запись онлайн"/>
+                        <Enrol text="Запись онлайн" />
                         <Enrol text="Написать" />
                     </div>
 
@@ -40,22 +62,22 @@ function Main() {
 
                     <div className={styles.picesAndServices}>
                         <PicesAndServicesCard
-                            backgroundImageUrl="https://хорошийсервис.рф/wp-content/uploads/2018/03/services1.jpg"
+                            backgroundImageUrl={CardImg1}
                             text="ДИАГНОСТИКА"
                         />
 
                         <PicesAndServicesCard
                             text="ТЕХ. ОБСЛУЖИВАНИЕ"
-                            backgroundImageUrl="https://хорошийсервис.рф/wp-content/uploads/2018/03/services1.jpg"
+                            backgroundImageUrl={CardImg2}
                         />
 
                         <PicesAndServicesCard
-                            backgroundImageUrl="https://хорошийсервис.рф/wp-content/uploads/2018/03/services1.jpg"
+                            backgroundImageUrl={CardImg3}
                             text="РЕМОНТ ХОДОВОЙ"
                         />
 
                         <PicesAndServicesCard
-                            backgroundImageUrl="https://хорошийсервис.рф/wp-content/uploads/2018/03/services1.jpg"
+                            backgroundImageUrl={CardImg4}
                             text="РЕМОНТ ДВС, КПП, АКПП"
                         />
                     </div>
@@ -65,38 +87,32 @@ function Main() {
                     <div className="centered">
                         <HeavyTextGray text="КАК ДОЕХАТЬ" margin="20px" color="#514F4F" fontSize="50px" />
                     </div>
-                    <BackgroundImgContainer url="https://хорошийсервис.рф/wp-content/uploads/2018/03/services1.jpg" height="55vh" backgroundAttachment = "fixed">
+                    <BackgroundImgContainer url={MainImg2} height="55vh" backgroundAttachment="fixed">
                         <div className={styles.howToGo}>
 
-                            
-                             <BackgroundImgContainer
-                              url="https://хорошийсервис.рф/wp-content/uploads/2018/03/services1.jpg" 
-                              height="50vh" 
-                              width = "100%" 
-                              borderRadius = "20px"
-                              >
 
-                             <div className={styles.positionForImgAndP}>
-                                <p className="textWhiteBig" style={{padding: "20px"}}>ул. Маяковского, 11 - територия бывшего авторынка</p>
+                            <BackgroundImgContainer
+                                url={AutoBox18Photo}
+                                height="50vh"
+                                width="80%"
+                                borderRadius="20px"
+                            >
+
+                                <div className={styles.positionForImgAndP}>
+                                    <p className="textWhiteBig" style={{ padding: "20px" }}>ул. Маяковского, 11 - територия бывшего авторынка</p>
                                 </div>
-                             </BackgroundImgContainer>
-                            
-
-                             <BackgroundImgContainer 
-                             url="https://хорошийсервис.рф/wp-content/uploads/2018/03/services1.jpg" 
-                             height="50vh" 
-                             width = "100%" 
-                             borderRadius = "20px"
-                             />
-                            
-
+                            </BackgroundImgContainer>
+                                
+                                   {LeafletMap} 
+                               
+                                
                         </div>
                     </BackgroundImgContainer>
                 </div>
             </main>
 
             <footer>
-                <Footer/>
+                <Footer />
             </footer>
         </React.Fragment>
     )
