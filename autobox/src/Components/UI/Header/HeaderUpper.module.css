@@ -9,4 +9,5 @@
     height: 50px;
     margin: 5px;
     box-shadow: 3px 4px 2px #0f0f0f;
+    cursor: pointer;
 }

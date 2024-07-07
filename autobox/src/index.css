@@ -220,3 +220,8 @@ li {
 .leaflet-top, .leaflet-bottom {
   z-index: 8 !important;
 }
+
+.leaflet-marker-icon {
+  width: 80px;
+  height: 80px;
+}

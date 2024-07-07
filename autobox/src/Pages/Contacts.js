@@ -8,14 +8,14 @@ import HeavyTextGray from "../Components/UI/Text/HeavyTextGray";
 import Footer from "../Components/UI/Footer/Footer";
 import styles from "./Contacts.module.css"
 import useLeafletMap from "../Hooks/useLeafletMap";
-// import logoIcon from "../Images/ImportantImages/LogoOrange.png";
+import logoIcon from "../Images/ImportantImages/LogoOrange.png";
 
 const Contacts = () => {
     const center = [56.828478, 53.200163];
     const zoom = 13;
-    const height = "600px";
+    const height = "50vh";
     const width = "80%";
-    // const iconUrl = logoIcon;
+    const imageUrl = logoIcon;
 
     const markers = [
         {
@@ -24,7 +24,7 @@ const Contacts = () => {
         }
     ];
 
-    const LeafletMap = useLeafletMap(center, zoom, height, width, markers);
+    const LeafletMap = useLeafletMap(center, zoom, height, width, markers, imageUrl);
 
     return (
         <React.Fragment>

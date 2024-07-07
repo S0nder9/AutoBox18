@@ -8,23 +8,24 @@ const useLeafletMap = (center, zoom, height, width, markers = [], imageUrl, imag
 
   useEffect(() => {
     if (map) {
-      // Очистка предыдущих маркеров
+      const customIcon = new L.Icon({
+        iconUrl: imageUrl,
+        iconSize: [25, 41],
+        iconAnchor: [12, 41],
+        popupAnchor: [1, -34],
+        shadowSize: [41, 41],
+        shadowAnchor: [12, 41] 
+      });
+
       map.eachLayer(layer => {
         if (layer instanceof L.Marker) {
           map.removeLayer(layer);
         }
       });
 
-      // Добавление новых маркеров
       markers.forEach(({ position, popup }) => {
-        L.marker(position).addTo(map).bindPopup(popup);
+        L.marker(position, { icon: customIcon }).addTo(map).bindPopup(popup);
       });
-
-      // Добавление пользовательского фонового изображения
-      if (imageUrl && imageBounds) {
-        L.imageOverlay(imageUrl, imageBounds).addTo(map);
-        map.fitBounds(imageBounds);  // Подгонка карты по изображению
-      }
     }
   }, [map, markers, imageUrl, imageBounds]);
 
@@ -35,7 +36,7 @@ const useLeafletMap = (center, zoom, height, width, markers = [], imageUrl, imag
         attribution={false}
       />
       {markers.map((marker, index) => (
-        <Marker key={index} position={marker.position}>
+        <Marker key={index} position={marker.position} icon={new L.Icon({ iconUrl: imageUrl })}>
           <Popup>{marker.popup}</Popup>
         </Marker>
       ))}

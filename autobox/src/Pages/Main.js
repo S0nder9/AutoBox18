@@ -8,6 +8,7 @@ import styles from "./Main.module.css";
 import HeavyTextGray from "../Components/UI/Text/HeavyTextGray";
 import PicesAndServicesCard from "../Components/UI/Cards/PicesAndServicesCard";
 import Footer from "../Components/UI/Footer/Footer";
+import logoIcon from "../Images/ImportantImages/LogoOrange.png";
 import MainImg from "../Images/ImportantImages/Фото на главном меню.png";
 import CardImg1 from "../Images/ImportantImages/Для карточки 1.png";
 import CardImg2 from "../Images/ImportantImages/Для карточки 2.png";
@@ -24,7 +25,7 @@ function Main() {
     const zoom = 13;
     const height = "50vh";
     const width = "80%";
-    // const iconUrl = logoIcon;
+    const imageUrl = logoIcon;
 
     const markers = [
         {
@@ -33,7 +34,7 @@ function Main() {
         }
     ];
 
-    const LeafletMap = useLeafletMap(center, zoom, height, width, markers);
+    const LeafletMap = useLeafletMap(center, zoom, height, width, markers, imageUrl);
 
     return (
         <React.Fragment>
