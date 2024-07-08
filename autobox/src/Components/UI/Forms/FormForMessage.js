@@ -23,7 +23,7 @@ const FormForMessage = ({ display }) => {
     const [refEmailValue, setRefEmailValue] = useState("");
     const [refTextValue, setRefTextValue] = useState("");
 
-    // const { notEmpty: isTextNotEmpty, correctPhoneNumber: isPhoneNumberValid, correctEmail: isEmailValid } = useValidForm(refPhoneValue);
+    // const { notEmty: isTextNotEmpty, correctPhoneNumber: isPhoneNumberValid, correctEmail: isEmailValid } = useValidForm(refPhoneValue);
     const { correctPhoneNumber: isPhoneNumberValid } = useValidForm(refPhoneValue);
     const { correctEmail: isEmailValid } = useValidForm(refEmailValue);
     const { notEmpty: isTextNotEmpty } = useValidForm(refTextValue);
@@ -182,7 +182,7 @@ const FormForMessage = ({ display }) => {
                         onChange={handleCheckboxChange}
                     />
                     <label htmlFor="privacy" className={styles.privacyText}>
-                        согласен с <Link to="/privacy-policy">
+                        согласен с <Link to="/privacyPolicy">
                             <span className={styles.spanColor}>политикой конфиденциальности *</span>
                         </Link>
                     </label>

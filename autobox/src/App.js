@@ -4,6 +4,8 @@ import Main from "./Pages/Main";
 import PricesAndServices from "./Pages/PricesAndServices";
 import WindowPage from "./Pages/WindowPage";
 import Contacts from "./Pages/Contacts";
+import PrivacyPolicy from "./Pages/privacyPolicy";
+import NotFound from "./Pages/NotFound";
 
 function App() {
   return (
@@ -20,11 +22,14 @@ function App() {
       <Route path="/contacts" exact>
         <Contacts />
       </Route>
+      <Route path="/privacyPolicy" exact>
+        <PrivacyPolicy />
+      </Route>
       <Route path="/pricesAndServices/:id">
         <WindowPage />
       </Route>
       <Route path="*">
-        <p>Page Not Found</p>
+       <NotFound/>
       </Route>
     </Switch>
   );

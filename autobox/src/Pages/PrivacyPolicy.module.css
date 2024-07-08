@@ -1,0 +1,15 @@
+.containerFromAutoBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.containerFromAutoBoxWidth {
+    width: calc(100% - 30%);
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+}

@@ -294,7 +294,7 @@ const FormForCall = ({ display }) => {
                         onChange={handleCheckboxChange}
                     />
                     <label htmlFor="privacy" className={styles.privacyText}>
-                        согласен с <Link to="/privacy-policy">
+                        согласен с <Link to="/privacyPolicy">
                             <span className={styles.spanColor}>политикой конфиденциальности *</span>
                         </Link>
                     </label>
