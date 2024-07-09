@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./Header.module.css";
 import Enrol from "../Buttons/Enrol";
 import useHideHeader from "../../../Hooks/useHideHeader";
@@ -7,6 +7,12 @@ import { Link } from "react-router-dom/cjs/react-router-dom.min";
 
 const Header = () => {
     const isScrolled = useHideHeader();
+    const [isOpen, setIsOpen] = useState(false);
+
+    const toggleBurgerMenu = () => {
+        setIsOpen(prev => !prev);
+        console.log(isOpen);
+    }
 
     return (
         <>
@@ -33,7 +39,7 @@ const Header = () => {
                         <Logo />
                     </Link>
 
-                    <Link to = "/pricesAndServices">
+                    <Link to="/pricesAndServices">
                         <button className={isScrolled ? "buttonHoverBlack" : "buttonHover"}>
                             цены и услуги
                         </button>
@@ -45,15 +51,40 @@ const Header = () => {
                         </button>
                     </a>
 
-                    <Link to = "/contacts">
+                    <Link to="/contacts">
                         <button className={isScrolled ? "buttonHoverBlack" : "buttonHover"}>
-                        контакты
+                            контакты
                         </button>
                     </Link>
 
                     <Enrol text="Записаться" />
                 </div>
 
+            </div>
+
+
+            <div className={styles.burgerMenu}>
+            <div className="centered">
+                    <label className={styles.burger} htmlFor="burger">
+                        <input 
+                            type="checkbox" 
+                            id="burger"
+                            checked={isOpen}
+                            onChange={toggleBurgerMenu}
+                        />
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </label>
+                </div>
+
+                {isOpen && (
+                    <div className={styles.toggleInfo}>
+                        <div className={styles.toggleInfoMain}>
+                            <p className="textWhiteBig">Информация</p>
+                        </div>
+                    </div>
+                )}
             </div>
         </>
     );

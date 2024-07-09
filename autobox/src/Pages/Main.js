@@ -44,7 +44,7 @@ function Main() {
                     <HeaderUpper />
                     <Header />
                     <div className="centered" style={{ height: "60%" }}>
-                        <HeavyText className="centered" fontSize="50px" text="РЕМОНТ ЛЮБОЙ СЛОЖНОСТИ В ИЖЕВСКЕ" />
+                        <HeavyText className="large-adapted-text" fontSize="50px" text="РЕМОНТ ЛЮБОЙ СЛОЖНОСТИ В ИЖЕВСКЕ" />
                     </div>
 
                     <div className={styles.enrolsPosition}>
@@ -58,7 +58,7 @@ function Main() {
             <main>
                 <div className={styles.secondBlock}>
                     <div className="centered">
-                        <HeavyTextGray text="ЦЕНЫ И УСЛУГИ" margin="20px" color="#514F4F" fontSize="50px" />
+                        <HeavyTextGray text="ЦЕНЫ И УСЛУГИ" className="large-adapted-text-gray" margin="20px" color="#514F4F" fontSize="50px" />
                     </div>
 
                     <div className={styles.picesAndServices}>

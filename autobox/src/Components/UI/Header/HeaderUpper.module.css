@@ -11,3 +11,25 @@
     box-shadow: 3px 4px 2px #0f0f0f;
     cursor: pointer;
 }
+
+@media (max-width: 1000px) {
+    .headerContainer {
+        width: calc(100% - 10%);
+    }
+}
+
+@media (max-width: 850px) {
+    .headerContainer {
+        width: 96%;
+    } 
+
+    .headerContainer {
+        display: none;
+    }
+}
+
+@media (min-width: 800px) {
+    .headerContainer {
+        display: flex;
+    }
+}

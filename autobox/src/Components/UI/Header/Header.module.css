@@ -7,7 +7,7 @@
     padding: 20px;
     transition: margin 0.3s ease;
     border-bottom: 1px white solid;
-    
+    transition: background-color 0.3s ease, margin 0.3s ease;
 }
 
 .mainWrapperForHeader {
@@ -15,4 +15,127 @@
     justify-content: space-around;
     transition: background-color 0.3s ease, margin 0.3s ease;
     z-index: 10;
+}
+
+.burger {
+    top: 20px;
+    position: fixed;
+    width: 60px;
+    height: 40px;
+    background: transparent;
+    cursor: pointer;
+    display: block;
+    z-index: 10;
+}
+
+.toggleInfo {
+    margin: 40px 0 0 0;
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    width: 100%;
+    height: 50%;
+    z-index: 10;
+}
+
+.toggleInfoMain {
+    padding: 5px;
+    width: 95%;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    z-index: 10;
+    background-color: rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    outline: 0px solid #000000;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.burger input {
+    display: none;
+}
+
+.burger span {
+    display: block;
+    position: absolute;
+    height: 6px;
+    width: 100%;
+    background: rgb(255, 255, 255);
+    border-radius: 9px;
+    opacity: 1;
+    left: 0;
+    transform: rotate(0deg);
+    transition: .25s ease-in-out;
+}
+
+/* Burger menu */
+
+.burger span:nth-of-type(1) {
+    top: 0px;
+    transform-origin: left center;
+}
+
+.burger span:nth-of-type(2) {
+    top: 50%;
+    transform: translateY(-50%);
+    transform-origin: left center;
+}
+
+.burger span:nth-of-type(3) {
+    top: 100%;
+    transform-origin: left center;
+    transform: translateY(-100%);
+}
+
+.burger input:checked ~ span:nth-of-type(1) {
+    transform: rotate(45deg);
+    top: 0px;
+    left: 5px;
+}
+
+.burger input:checked ~ span:nth-of-type(2) {
+    width: 0%;
+    opacity: 0;
+}
+
+.burger input:checked ~ span:nth-of-type(3) {
+    transform: rotate(-45deg);
+    left: 5px;
+}
+
+/* Burger menu */
+
+@media (max-width: 1000px) {
+    .headerWrapper {
+        width: calc(100% - 10%);
+    }
+}
+
+@media (max-width: 850px) {
+    .headerWrapper {
+        width: 96%;
+    }
+}
+
+@media (min-width: 800px) {
+    .mainWrapperForHeader {
+        display: flex;
+    }
+
+    .burgerMenu {
+        display: none;
+    }
+}
+
+@media (max-width: 800px) {
+    .mainWrapperForHeader {
+        display: none;
+    }
+
+    .burgerMenu {
+        display: flex;
+    }
 }

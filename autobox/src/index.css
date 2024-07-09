@@ -225,3 +225,526 @@ li {
   width: 80px;
   height: 80px;
 }
+
+/* large-adapted-text large-adapted-text-gray textWhiteSmall textWhiteBig*/
+
+@media (max-width: 3500px) {
+  .large-adapted-text {
+    font-size: 120px !important;
+
+}
+
+.large-adapted-text-gray {
+  font-size: 100px !important;
+
+}
+
+  .textWhiteSmall {
+    font-size: 35px !important;
+  }
+
+  .textWhiteMedium {
+    font-size: 40px !important;
+  }
+
+  .textGraySmall {
+    font-size: 35px !important;
+  }
+
+  .textGrayMedium {
+    font-size: 40px !important;
+  }
+
+  .textGrayHeavy {
+    font-size: 60px !important;
+  }
+
+  .textDarkSmall {
+    font-size: 35px !important;
+  }
+
+  .textWhiteBig {
+    font-size: 50px !important;
+  }
+
+  .textBlackBig {
+    font-size: 50px !important;
+  }
+
+  .buttonHover {
+    font-size: 50px !important;
+  }
+
+  .buttonHoverBlack {
+    font-size: 50px !important;
+  }
+  
+}
+
+@media (max-width: 3000px) {
+
+  .large-adapted-text {
+    font-size: 90px !important;
+
+}
+
+.large-adapted-text-gray {
+  font-size: 70px !important;
+
+}
+  .textWhiteSmall {
+    font-size: 32px !important;
+  }
+
+  .textWhiteMedium {
+    font-size: 35px !important;
+  }
+
+  .textGraySmall {
+    font-size: 32px !important;
+  }
+
+  .textGrayMedium {
+    font-size: 35px !important;
+  }
+
+  .textGrayHeavy {
+    font-size: 55px !important;
+  }
+
+  .textDarkSmall {
+    font-size: 32px !important;
+  }
+
+  .textWhiteBig {
+    font-size: 45px !important;
+  }
+
+  .textBlackBig {
+    font-size: 45px !important;
+  }
+
+  .buttonHover {
+    font-size: 45px !important;
+  }
+
+  .buttonHoverBlack {
+    font-size: 45px !important;
+  }
+}
+
+@media (max-width: 2800px) {
+  .large-adapted-text {
+    font-size: 80px !important;
+
+}
+
+.large-adapted-text-gray {
+  font-size: 60px !important;
+
+}
+  .textWhiteSmall {
+    font-size: 28px !important;
+  }
+
+  .textWhiteMedium {
+    font-size: 32px !important;
+  }
+
+  .textGraySmall {
+    font-size: 28px !important;
+  }
+
+  .textGrayMedium {
+    font-size: 32px !important;
+  }
+
+  .textGrayHeavy {
+    font-size: 50px !important;
+  }
+
+  .textDarkSmall {
+    font-size: 28px !important;
+  }
+
+  .textWhiteBig {
+    font-size: 40px !important;
+  }
+
+  .textBlackBig {
+    font-size: 40px !important;
+  }
+
+  .buttonHover {
+    font-size: 40px !important;
+  }
+
+  .buttonHoverBlack {
+    font-size: 40px !important;
+  }
+}
+
+@media (max-width: 2400px) {
+  .large-adapted-text {
+    font-size: 70px !important;
+
+}
+
+.large-adapted-text-gray {
+  font-size: 50px !important;
+
+}
+
+  .textWhiteSmall {
+    font-size: 23px !important;
+  }
+
+  .textWhiteMedium {
+    font-size: 28px !important;
+  }
+
+  .textGraySmall {
+    font-size: 23px !important;
+  }
+
+  .textGrayMedium {
+    font-size: 28px !important;
+  }
+
+  .textGrayHeavy {
+    font-size: 45px !important;
+  }
+
+  .textDarkSmall {
+    font-size: 23px !important;
+  }
+
+  .textWhiteBig {
+    font-size: 35px !important;
+  }
+
+  .textBlackBig {
+    font-size: 35px !important;
+  }
+
+  .buttonHover {
+    font-size: 35px !important;
+  }
+
+  .buttonHoverBlack {
+    font-size: 35px !important;
+  }
+}
+
+@media (max-width: 2000px) {
+  .large-adapted-text {
+    font-size: 60px !important;
+
+}
+
+.large-adapted-text-gray {
+  font-size: 45px !important;
+
+}
+
+  .textWhiteSmall {
+    font-size: 20px !important;
+  }
+
+  .textWhiteMedium {
+    font-size: 25px !important;
+  }
+
+  .textGraySmall {
+    font-size: 20px !important;
+  }
+
+  .textGrayMedium {
+    font-size: 25px !important;
+  }
+
+  .textGrayHeavy {
+    font-size: 45px !important;
+  }
+
+  .textDarkSmall {
+    font-size: 20px !important;
+  }
+
+  .textWhiteBig {
+    font-size: 30px !important;
+  }
+
+  .textBlackBig {
+    font-size: 30px !important;
+  }
+
+  .buttonHover {
+    font-size: 27px !important;
+  }
+
+  .buttonHoverBlack {
+    font-size: 27px !important;
+  }
+}
+
+@media (max-width: 1450px) {
+  .large-adapted-text {
+    font-size: 42px !important;
+
+}
+
+.large-adapted-text-gray {
+  font-size: 35px !important;
+
+}
+
+  .textWhiteSmall {
+    font-size: 18px !important;
+  }
+
+  .textWhiteMedium {
+    font-size: 22px !important;
+  }
+
+  .textGraySmall {
+    font-size: 18px !important;
+  }
+
+  .textGrayMedium {
+    font-size: 22px !important;
+  }
+
+  .textGrayHeavy {
+    font-size: 40px !important;
+  }
+
+  .textDarkSmall {
+    font-size: 18px !important;
+  }
+
+  .textWhiteBig {
+    font-size: 26px !important;
+  }
+
+  .textBlackBig {
+    font-size: 26px !important;
+  }
+
+  .buttonHover {
+    font-size: 20px !important;
+  }
+
+  .buttonHoverBlack {
+    font-size: 20px !important;
+  }
+}
+
+@media (max-width: 1100px) {
+
+  .large-adapted-text {
+    font-size: 35px !important;
+
+}
+
+.large-adapted-text-gray {
+  font-size: 28px !important;
+
+}
+  .textWhiteSmall {
+    font-size: 16px !important;
+  }
+
+  .textWhiteMedium {
+    font-size: 20px !important;
+  }
+
+  .textGraySmall {
+    font-size: 16px !important;
+  }
+
+  .textGrayMedium {
+    font-size: 20px !important;
+  }
+
+  .textGrayHeavy {
+    font-size: 35px !important;
+  }
+
+  .textDarkSmall {
+    font-size: 16px !important;
+  }
+
+  .textWhiteBig {
+    font-size: 22px !important;
+  }
+
+  .textBlackBig {
+    font-size: 22px !important;
+  }
+
+  .buttonHover {
+    font-size: 20px !important;
+  }
+
+  .buttonHoverBlack {
+    font-size: 20px !important;
+  }
+}
+
+@media (max-width: 750px) {
+
+  .large-adapted-text {
+    font-size: 28px !important;
+
+}
+
+.large-adapted-text-gray {
+  font-size: 24px !important;
+
+}
+  .textWhiteSmall {
+    font-size: 14px !important;
+  }
+
+  .textWhiteMedium {
+    font-size: 18px !important;
+  }
+
+  .textGraySmall {
+    font-size: 14px !important;
+  }
+
+  .textGrayMedium {
+    font-size: 18px !important;
+  }
+
+  .textGrayHeavy {
+    font-size: 30px !important;
+  }
+
+  .textDarkSmall {
+    font-size: 14px !important;
+  }
+
+  .textWhiteBig {
+    font-size: 20px !important;
+  }
+
+  .textBlackBig {
+    font-size: 20px !important;
+  }
+
+  .buttonHover {
+    font-size: 18px !important;
+  }
+
+  .buttonHoverBlack {
+    font-size: 18px !important;
+  }
+}
+
+@media (max-width: 400px) {
+
+  .large-adapted-text {
+    font-size: 20px !important;
+
+}
+
+.large-adapted-text-gray {
+  font-size: 16px !important;
+
+}
+  .textWhiteSmall {
+    font-size: 12px !important;
+  }
+
+  .textWhiteMedium {
+    font-size: 16px !important;
+  }
+
+  .textGraySmall {
+    font-size: 12px !important;
+  }
+
+  .textGrayMedium {
+    font-size: 16px !important;
+  }
+
+  .textGrayHeavy {
+    font-size: 25px !important;
+  }
+
+  .textDarkSmall {
+    font-size: 12px !important;
+  }
+
+  .textWhiteBig {
+    font-size: 18px !important;
+  }
+
+  .textBlackBig {
+    font-size: 18px !important;
+  }
+
+  .buttonHover {
+    font-size: 16px !important;
+  }
+
+  .buttonHoverBlack {
+    font-size: 16px !important;
+  }
+}
+
+@media (max-width: 300px) {
+
+  .large-adapted-text {
+    font-size: 18px !important;
+
+}
+
+.large-adapted-text-gray {
+  font-size: 15px !important;
+
+}
+  .textWhiteSmall {
+    font-size: 10px !important;
+  }
+
+  .textWhiteMedium {
+    font-size: 14px !important;
+  }
+
+  .textGraySmall {
+    font-size: 10px !important;
+  }
+
+  .textGrayMedium {
+    font-size: 14px !important;
+  }
+
+  .textGrayHeavy {
+    font-size: 20px !important;
+  }
+
+  .textDarkSmall {
+    font-size: 10px !important;
+  }
+
+  .textWhiteBig {
+    font-size: 15px !important;
+  }
+
+  .textBlackBig {
+    font-size: 15px !important;
+  }
+
+  .buttonHover {
+    font-size: 14px !important;
+  }
+
+  .buttonHoverBlack {
+    font-size: 14px !important;
+  }
+}
+

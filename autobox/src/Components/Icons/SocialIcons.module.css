@@ -5,3 +5,13 @@
 .iconLink {
     margin: 10px;
 }
+
+@media (max-width: 800px) {
+    .iconLink {
+        margin: 5px;
+    }
+
+    #icon {
+        font-size: 10px !important;
+    }
+}
