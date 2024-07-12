@@ -24,7 +24,7 @@ function Main() {
     const center = [56.828478, 53.200163];
     const zoom = 13;
     const height = "50vh";
-    const width = "80%";
+    const width = "100%";
     const imageUrl = logoIcon;
 
     const markers = [
@@ -88,14 +88,15 @@ function Main() {
                     <div className="centered">
                         <HeavyTextGray text="КАК ДОЕХАТЬ" margin="20px" color="#514F4F" fontSize="50px" />
                     </div>
-                    <BackgroundImgContainer url={MainImg2} height="55vh" backgroundAttachment="fixed">
+
+                    <div className={styles.bcImgDiv}>
                         <div className={styles.howToGo}>
 
 
                             <BackgroundImgContainer
                                 url={AutoBox18Photo}
                                 height="50vh"
-                                width="80%"
+                                width="100%"
                                 borderRadius="20px"
                             >
 
@@ -108,8 +109,8 @@ function Main() {
                                
                                 
                         </div>
-                    </BackgroundImgContainer>
-                </div>
+                    </div>
+                    </div>
             </main>
 
             <footer>

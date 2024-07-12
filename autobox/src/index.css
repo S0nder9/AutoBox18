@@ -592,7 +592,7 @@ li {
   }
 }
 
-@media (max-width: 750px) {
+@media (max-width: 800px) {
 
   .large-adapted-text {
     font-size: 28px !important;
@@ -636,11 +636,11 @@ li {
   }
 
   .buttonHover {
-    font-size: 18px !important;
+    font-size: 25px !important;
   }
 
   .buttonHoverBlack {
-    font-size: 18px !important;
+    font-size: 25px !important;
   }
 }
 
@@ -688,11 +688,11 @@ li {
   }
 
   .buttonHover {
-    font-size: 16px !important;
+    font-size: 20px !important;
   }
 
   .buttonHoverBlack {
-    font-size: 16px !important;
+    font-size: 20px !important;
   }
 }
 

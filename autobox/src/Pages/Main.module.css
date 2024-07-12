@@ -38,3 +38,19 @@
     display: grid;
     align-items: center;
 }
+
+.bcImgDiv {
+        width: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        background-image: url("../Images/ImportantImages/Фото на главном меню.png");
+        background-attachment: fixed;
+}
+
+@media (max-width: 1000px) {
+    .howToGo {
+        flex-direction: column-reverse
+    }
+}
