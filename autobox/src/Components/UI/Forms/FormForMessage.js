@@ -7,7 +7,6 @@ import useHttp from "../../../Hooks/useHttp";
 import styles from "./FormForMessage.module.css";
 
 const FormForMessage = ({ display }) => {
-
     const [errors, setErrors] = useState([]);
     const [successMessage, setSuccessMessage] = useState("");
     const [isChecked, setIsChecked] = useState(false);
@@ -24,12 +23,10 @@ const FormForMessage = ({ display }) => {
     const [refTextValue, setRefTextValue] = useState("");
 
     // const { notEmty: isTextNotEmpty, correctPhoneNumber: isPhoneNumberValid, correctEmail: isEmailValid } = useValidForm(refPhoneValue);
-    const { correctPhoneNumber: isPhoneNumberValid } = useValidForm(refPhoneValue);
+    const { correctPhoneNumber: isPhoneNumberValid } =
+        useValidForm(refPhoneValue);
     const { correctEmail: isEmailValid } = useValidForm(refEmailValue);
     const { notEmpty: isTextNotEmpty } = useValidForm(refTextValue);
-
-
-
 
     useEffect(() => {
         if (refName.current) {
@@ -46,7 +43,12 @@ const FormForMessage = ({ display }) => {
         if (refText.current) {
             setRefTextValue(refText.current.value);
         }
-    }, [refName.current?.value, refPhone.current?.value, refEmail.current?.value, refText.current?.value]);
+    }, [
+        refName.current?.value,
+        refPhone.current?.value,
+        refEmail.current?.value,
+        refText.current?.value,
+    ]);
 
     const handleCheckboxChange = (e) => {
         setIsChecked(e.target.checked);
@@ -69,7 +71,9 @@ const FormForMessage = ({ display }) => {
         }
 
         if (!isChecked) {
-            newErrors.push("Вы должны согласиться с политикой конфиденциальности");
+            newErrors.push(
+                "Вы должны согласиться с политикой конфиденциальности"
+            );
         }
 
         if (newErrors.length > 0) {
@@ -78,12 +82,17 @@ const FormForMessage = ({ display }) => {
         } else {
             setErrors([]);
             setSuccessMessage("Ожидайте, мы вам перезвоним");
-            console.log(`Имя: ${refNameValue}, Номер телефона: ${refPhoneValue}`);
+            console.log(
+                `Имя: ${refNameValue}, Номер телефона: ${refPhoneValue}`
+            );
             sentDataToTelegramHandler();
         }
     };
 
-    const { data } = useHttp("https://autobox18-ba317-default-rtdb.firebaseio.com/BotToken.json", { method: "GET" });
+    const { data } = useHttp(
+        "https://autobox18-ba317-default-rtdb.firebaseio.com/BotToken.json",
+        { method: "GET" }
+    );
 
     const sentDataToTelegramHandler = async () => {
         if (!data) {
@@ -97,22 +106,26 @@ const FormForMessage = ({ display }) => {
 
         const text = `
         <b>У вас новое сообщение:</b>\n
-        <b>Имя:</b> ${refNameValue || 'Не указано'}\n
-        <b>Номер телефона:</b> <a href="tel:${refPhoneValue || 'Не указан'}">${refPhoneValue || 'Не указан'}</a>\n
-        <b>Email:</b> <a href="mailto:${refEmailValue || 'Не указан'}">${refEmailValue || 'Не указан'}</a>\n
-        <b>Текст сообщения:</b> <em>${refTextValue || 'Не указан'}</em>
+        <b>Имя:</b> ${refNameValue || "Не указано"}\n
+        <b>Номер телефона:</b> <a href="tel:${refPhoneValue || "Не указан"}">${
+            refPhoneValue || "Не указан"
+        }</a>\n
+        <b>Email:</b> <a href="mailto:${refEmailValue || "Не указан"}">${
+            refEmailValue || "Не указан"
+        }</a>\n
+        <b>Текст сообщения:</b> <em>${refTextValue || "Не указан"}</em>
         `;
 
         try {
             const response = await fetch(url, {
-                method: 'POST',
+                method: "POST",
                 headers: {
-                    'Content-Type': 'application/json',
+                    "Content-Type": "application/json",
                 },
                 body: JSON.stringify({
                     chat_id: chatId,
                     text: text,
-                    parse_mode: 'HTML',
+                    parse_mode: "HTML",
                 }),
             });
 
@@ -122,11 +135,10 @@ const FormForMessage = ({ display }) => {
                 setErrorStateForTg(false);
             }
         } catch (error) {
-            console.error('Ошибка при отправке сообщения в Telegram:', error);
+            console.error("Ошибка при отправке сообщения в Telegram:", error);
             setErrorStateForTg(true);
         }
     };
-
 
     return (
         <>
@@ -134,16 +146,28 @@ const FormForMessage = ({ display }) => {
                 <ErrorPopup key={index} timeOut="5000" message={error} />
             ))}
 
-            {errorStateForTg && <ErrorPopup timeOut="5000" message="Произошла какая-то ошибка при отправке данных" />}
-            {errorStateForTg === false && <SuccessPopup timeOut="5000" message={successMessage} />}
-            <form className={styles.form} style={{ display: display }} onSubmit={sentDataHandler}>
+            {errorStateForTg && (
+                <ErrorPopup
+                    timeOut="5000"
+                    message="Произошла какая-то ошибка при отправке данных"
+                />
+            )}
+            {errorStateForTg === false && (
+                <SuccessPopup timeOut="5000" message={successMessage} />
+            )}
+            <form
+                className={styles.form}
+                style={{ display: display }}
+                onSubmit={sentDataHandler}
+            >
                 <input
                     placeholder="ВВЕДИТЕ ИМЯ"
                     type="text"
                     name="text"
                     className="input"
                     ref={refName}
-                    onChange={() => setRefNameValue(refName.current.value)} />
+                    onChange={() => setRefNameValue(refName.current.value)}
+                />
 
                 <input
                     placeholder="ВВЕДИТЕ НОМЕР ТЕЛЕФОНА *"
@@ -153,7 +177,6 @@ const FormForMessage = ({ display }) => {
                     ref={refPhone}
                     onChange={() => setRefPhoneValue(refPhone.current.value)}
                 />
-
 
                 <input
                     placeholder="ВВЕДИТЕ EMAIL *"
@@ -182,26 +205,29 @@ const FormForMessage = ({ display }) => {
                         onChange={handleCheckboxChange}
                     />
                     <label htmlFor="privacy" className={styles.privacyText}>
-                        согласен с <Link to="/privacyPolicy">
-                            <span className={styles.spanColor}>политикой конфиденциальности *</span>
+                        согласен с{" "}
+                        <Link to="/privacyPolicy">
+                            <span className={styles.spanColor}>
+                                политикой конфиденциальности *
+                            </span>
                         </Link>
                     </label>
                 </div>
 
-                <button 
-                type="submit" 
-                className={styles.submitButton} 
-                disabled={errorStateForTg === false} 
-                style={{
-                    backgroundColor: errorStateForTg === false ? "red" : "",
-                    cursor: errorStateForTg === false ? "not-allowed" : ""
-                }}>
-                    <span className='textWhiteSmall'>ОТПРАВИТЬ ЗАЯВКУ</span>
+                <button
+                    type="submit"
+                    className={styles.submitButton}
+                    disabled={errorStateForTg === false}
+                    style={{
+                        backgroundColor: errorStateForTg === false ? "red" : "",
+                        cursor: errorStateForTg === false ? "not-allowed" : "",
+                    }}
+                >
+                    <span className="textWhiteSmall">ОТПРАВИТЬ ЗАЯВКУ</span>
                 </button>
-
             </form>
         </>
-    )
-}
+    );
+};
 
 export default FormForMessage;

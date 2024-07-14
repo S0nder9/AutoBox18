@@ -20,8 +20,6 @@ li {
   list-style: none;
 }
 
-/* Имплементировать копирование содержимого при нажатии + hover animation*/
-
 .textWhiteSmall {
   color: #fff;
   font-size: 20px;
@@ -183,12 +181,11 @@ li {
   font-size: 45px;
 }
 
-/* Имплементировать копирование содержимого при нажатии + hover animation*/
-
 .centered {
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
   width: 100%;
 }
 
@@ -226,7 +223,7 @@ li {
   height: 80px;
 }
 
-/* large-adapted-text large-adapted-text-gray textWhiteSmall textWhiteBig*/
+/* large-adapted-text large-adapted-text-gray textWhiteSmall textWhiteBig textBlackBig buttonHover buttonHoverBlack*/
 
 @media (max-width: 3500px) {
   .large-adapted-text {

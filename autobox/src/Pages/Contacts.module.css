@@ -12,13 +12,87 @@
     flex-direction: column;
     justify-content: start;
     align-items: start;
+    text-align: center;
 }
 
 .iconWhithText {
     display: flex;
     align-items: center;
     gap: 20px;
-    margin: 5px;
     padding: 10px;
     margin: 0 0 0 30px;
+}
+
+.textGrayMain {
+    font-size: 28px;
+    color: #514F4F;
+}
+
+@media (max-width: 3500px) {
+    .textGrayMain {
+        font-size: 40px !important;
+    }
+}
+
+@media (max-width: 3000px) {
+    .textGrayMain {
+        font-size: 35px !important;
+    }
+}
+
+@media (max-width: 2800px) {
+    .textGrayMain {
+        font-size: 32px !important;
+    }
+}
+
+@media (max-width: 2400px) {
+    .textGrayMain {
+        font-size: 30px !important;
+    }
+}
+
+@media (max-width: 2000px) {
+    .textGrayMain {
+        font-size: 28px !important;
+    }
+}
+
+@media (max-width: 1450px) {
+    .textGrayMain {
+        font-size: 25px !important;
+    }
+}
+
+@media (max-width: 1100px) {
+    .textGrayMain {
+        font-size: 22px !important;
+    }
+}
+
+@media (max-width: 750px) {
+    .textGrayMain {
+        font-size: 19px !important;
+    }
+
+    .containerFromAutoBoxWidth {
+        width: 90%;
+    }
+}
+
+@media (max-width: 400px) {
+    .textGrayMain {
+        font-size: 17px !important;
+    }
+
+    .containerFromAutoBoxWidth {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media (max-width: 300px) {
+    .textGrayMain {
+        font-size: 15px !important;
+    }
 }

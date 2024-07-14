@@ -19,7 +19,7 @@ const PricesAndServices = () => {
                     <HeaderUpper />
                     <Header />
                     <div className="centered" style={{ height: "60%" }}>
-                        <HeavyText className="centered" fontSize="50px" text="РЕМОНТ ЛЮБОЙ СЛОЖНОСТИ В ИЖЕВСКЕ" />
+                        <HeavyText className="large-adapted-text" fontSize="50px" text="РЕМОНТ ЛЮБОЙ СЛОЖНОСТИ В ИЖЕВСКЕ" />
                     </div>
 
                 </BackgroundImgContainer>
@@ -28,7 +28,7 @@ const PricesAndServices = () => {
             <main>
                 <div>
                     <div className="centered">
-                        <HeavyTextGray text="ОСНОВНЫЕ КАТЕГРИИ УСЛУГ" margin="20px" color="#514F4F" fontSize="50px" />
+                        <HeavyTextGray text="ОСНОВНЫЕ КАТЕГРИИ УСЛУГ" margin="20px" color="#514F4F" fontSize="50px" className="large-adapted-text-gray" />
                     </div>
 
                     <div className={styles.containerForCards}>

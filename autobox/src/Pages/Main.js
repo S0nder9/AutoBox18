@@ -86,7 +86,7 @@ function Main() {
 
                 <div className={styles.thirdBlock}>
                     <div className="centered">
-                        <HeavyTextGray text="КАК ДОЕХАТЬ" margin="20px" color="#514F4F" fontSize="50px" />
+                        <HeavyTextGray text="КАК ДОЕХАТЬ" margin="20px" color="#514F4F" fontSize="50px" className="large-adapted-text-gray"/>
                     </div>
 
                     <div className={styles.bcImgDiv}>

@@ -56,3 +56,34 @@
 .inputValid {
     border-color: green;
 }
+
+
+@media (max-width: 730px) {
+    .spanColor {
+        font-size: 18px;
+    }
+
+    .privacyText {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 600px) {
+    .spanColor {
+        font-size: 16px;
+    }
+
+    .privacyText {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 500px) {
+    .spanColor {
+        font-size: 14px;
+    }
+
+    .privacyText {
+        font-size: 14px;
+    }
+}

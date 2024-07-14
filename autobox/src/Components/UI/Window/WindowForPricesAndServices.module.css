@@ -44,11 +44,11 @@
     flex-wrap: wrap;
     gap: 20px;
     background-color: #ebe9e9;
-  backdrop-filter: blur(10px); 
-  -webkit-backdrop-filter: blur(20px);
-  padding: 20px;
-  border-radius: 16px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(20px);
+    padding: 20px;
+    border-radius: 16px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .locationDiv {
@@ -61,9 +61,17 @@
 .wrapperColumes {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    align-items: start;
+    justify-content: start;
     gap: 40px;
+}
+
+.centeredDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
 }
 
 /* For container */
@@ -73,9 +81,101 @@
     height: 100vh;
     --color: rgba(114, 114, 114, 0.3);
     background-color: #191a1a;
-    background-image: linear-gradient(0deg, transparent 24%, var(--color) 25%, var(--color) 26%, transparent 27%,transparent 74%, var(--color) 75%, var(--color) 76%, transparent 77%,transparent),
-    linear-gradient(90deg, transparent 24%, var(--color) 25%, var(--color) 26%, transparent 27%,transparent 74%, var(--color) 75%, var(--color) 76%, transparent 77%,transparent);
+    background-image: linear-gradient(0deg, transparent 24%, var(--color) 25%, var(--color) 26%, transparent 27%, transparent 74%, var(--color) 75%, var(--color) 76%, transparent 77%, transparent),
+        linear-gradient(90deg, transparent 24%, var(--color) 25%, var(--color) 26%, transparent 27%, transparent 74%, var(--color) 75%, var(--color) 76%, transparent 77%, transparent);
     background-size: 55px 55px;
-  }
+}
 
 /* For container */
+
+@media (max-width: 1500px) {
+    .mainContainer {
+        margin: 100px 0 0 0;
+        width: calc(100% - 20%);
+    }
+}
+
+@media (max-width: 850px) {
+    .mainContainer {
+        margin: 100px 0 0 0;
+        width: calc(100% - 10%);
+    }
+}
+
+
+@media (max-width: 650px) {
+    .mainContainer {
+        margin: 10px;
+        width: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    .overlay {
+        left: 90%;
+        right: 0;
+        top: 20px;
+        position: absolute;
+        cursor: pointer;
+    }
+    
+    .mainContainer {
+        display: flex;
+        justify-content: start;
+        margin: 10px;
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .container  {
+        height: auto;
+    }
+
+    #textForCenteredDiv {
+        margin: 10px !important;
+    }
+
+    
+.wrapperColumes {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    gap: 10px;
+    width: 100%;
+}
+}
+
+@media (max-width: 512px) {
+    .overlay {
+        left: 75%;
+    }
+}
+
+@media (max-width: 450px) {
+    .mainContainer {
+        display: flex;
+        justify-content: start;
+        width: 100%;
+        flex-direction: column;
+        margin: 2px;
+    }
+
+    .container  {
+        height: auto;
+    }
+
+    #textForCenteredDiv {
+        margin: 5px !important;
+    }
+
+    
+.wrapperColumes {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    gap: 5px;
+    width: 100%;
+}
+}

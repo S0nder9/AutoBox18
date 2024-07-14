@@ -13,3 +13,10 @@
     justify-content: start;
     align-items: start;
 }
+
+@media (max-width: 800px) {
+    .containerFromAutoBoxWidth {
+        width: 95%;
+        text-align: center;
+    }
+}

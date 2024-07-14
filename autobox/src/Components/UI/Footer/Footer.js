@@ -48,7 +48,7 @@ const Footer = () => {
                 </div>
 
                 <div className={styles.thirdContainerForFooter}>
-                    <p className="textWhiteBig">МЕНЮ НАВИГАЦИИ</p>
+                    <p className="textWhiteBig" style={{textAlign: "center"}}>ИНФОРМАЦИЯ</p>
                     <br />
                     <div className={styles.crossWhithText} onClick={handleCopy}>
                         <box-icon name='x' color="#FF5C00" />

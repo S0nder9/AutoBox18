@@ -14,7 +14,7 @@ const Contacts = () => {
     const center = [56.828478, 53.200163];
     const zoom = 13;
     const height = "50vh";
-    const width = "80%";
+    const width = "90%";
     const imageUrl = logoIcon;
 
     const markers = [
@@ -44,43 +44,43 @@ const Contacts = () => {
             <main>
                 <div>
                     <div className="centered">
-                        <HeavyTextGray text="КОНТАКТЫ" margin="20px" color="#514F4F" fontSize="50px" />
+                        <HeavyTextGray text="КОНТАКТЫ" margin="20px" color="#514F4F" fontSize="50px" className="large-adapted-text-gray"/>
                     </div>
 
                     <div className={styles.containerFromAutoBox}>
                         <div className={styles.containerFromAutoBoxWidth}>
-                            <HeavyTextGray text="Автосервис Автобокс18" margin="40px" color="#514F4F" fontSize="40px" />
+                            <HeavyTextGray text="Автосервис Автобокс18" margin="40px" color="#514F4F" fontSize="40px" className="large-adapted-text-gray"/>
 
                             <div className={styles.iconWhithText}>
                                 <a href="tel:+83412567615">
                                     <box-icon type='solid' name='phone-call' color='#FF5C00' size='32px' />
                                 </a>
-                                <HeavyText fontSize="28px" text="8(3412)56-76-15" color="#514F4F" />
+                                <p className={styles.textGrayMain}>8(3412)56-76-15</p>
                             </div>
 
                             <div className={styles.iconWhithText}>
                                 <a href="https://www.google.com/maps/place/Маяковского,+11"  target="_blank" rel="noopener noreferrer">
                                     <box-icon name='location-plus' type='solid' color='#FF5C00' size='32px' />
                                 </a>
-                                <HeavyText fontSize="28px" text="Маяковского, 11" color="#514F4F" />
+                                <p className={styles.textGrayMain}>Маяковского, 11</p>
                             </div>
 
                             <div className={styles.iconWhithText}>    
                             <box-icon type='solid' name='time' color='#FF5C00' size='32px'></box-icon>
-                                <HeavyText fontSize="28px" text="Пн-Пт - 9:00 до 19: 00" color="#514F4F" />
+                            <p className={styles.textGrayMain}>Пн-Пт - 9:00 до 19: 00</p>
                             </div>
 
                             <div className={styles.iconWhithText}>
                                 <a href="mailto:your-email@example.com" >
                                     <box-icon name='envelope' type='solid' color='#FF5C00' size='32px' />
                                 </a>
-                                <HeavyText fontSize="28px" text="your-email@example.com" color="#514F4F" />
+                                <p className={styles.textGrayMain}>your-email@example.com</p>
                             </div>
                         </div>
                     </div>
 
                     <div className="centered">
-                        <HeavyTextGray text="ГДЕ МЫ НАХОДИТМСЯ" margin="40px" color="#514F4F" fontSize="50px" />
+                        <HeavyTextGray text="ГДЕ МЫ НАХОДИТМСЯ" margin="40px" color="#514F4F" fontSize="50px" className="large-adapted-text-gray"/>
                     </div>
 
                     <div className="centered">
@@ -88,18 +88,18 @@ const Contacts = () => {
                     </div>
 
                     <div className="centered">
-                        <HeavyTextGray text="О НАС" margin="40px" color="#514F4F" fontSize="50px" />
+                        <HeavyTextGray text="О НАС" margin="40px" color="#514F4F" fontSize="50px" className="large-adapted-text-gray"/>
                     </div>
 
                     <div className={styles.containerFromAutoBox}>
                         <div className={styles.containerFromAutoBoxWidth}>
-                        <HeavyTextGray text='Добро пожаловать в автосервис "Автобокс18" в Ижевске!' margin="40px" color="#514F4F" fontSize="25px" />
+                        <HeavyTextGray text='Добро пожаловать в автосервис "Автобокс18" в Ижевске!' margin="40px" color="#514F4F" fontSize="25px" className="large-adapted-text-gray"/>
 
-                        <HeavyTextGray 
+                        <HeavyTextGray
                         text='Мы – команда профессионалов, посвятившая свою жизнь автомобилям и их обслуживанию.
                          Наш автосервис предоставляет широкий спектр услуг,
                           начиная от базовой диагностики и заканчивая сложным ремонтом двигателей и кузовным ремонтом.
-                           Мы гордимся тем, что предлагаем нашим клиентам высококачественные услуги по разумным ценам.' margin="20px" color="#514F4F" fontSize="23px" />
+                           Мы гордимся тем, что предлагаем нашим клиентам высококачественные услуги по разумным ценам.' margin="20px" color="#514F4F" fontSize="23px" className="large-adapted-text-gray" />
                     </div>
                     </div>
 

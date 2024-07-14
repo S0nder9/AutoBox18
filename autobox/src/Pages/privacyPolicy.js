@@ -13,94 +13,122 @@ const PrivacyPolicy = () => {
         <React.Fragment>
             <header>
                 <BackgroundImgContainer url={MainImgForContacts} height="65vh">
-
                     <HeaderUpper />
                     <Header />
 
                     <div className="centered" style={{ height: "60%" }}>
-                        <HeavyText className="centered" fontSize="50px" text="КОНТАКТЫ" />
+                        <HeavyText
+                            className="large-adapted-text"
+                            fontSize="50px"
+                            text="ПОЛИТИКА КОНФИДЕНЦИАЛЬНОСТИ"
+                        />
                     </div>
-
                 </BackgroundImgContainer>
             </header>
 
             <main>
                 <div>
                     <div className="centered">
-                        <HeavyTextGray text="ПОЛИТИКА КОНФИДЕНЦИАЛЬНОСТИ" margin="20px" color="#514F4F" fontSize="50px" />
+                        <HeavyTextGray
+                            text="ПОЛИТИКА КОНФИДЕНЦИАЛЬНОСТИ"
+                            margin="20px"
+                            color="#514F4F"
+                            fontSize="50px"
+                            className="large-adapted-text-gray"
+                        />
                     </div>
 
                     <div className={styles.containerFromAutoBox}>
-
                         <div className={styles.containerFromAutoBoxWidth}>
                             <div>
                                 <HeavyTextGray
-                                    text='1. Общие положения'
-                                    margin="20px" color="#514F4F"
-                                    fontSize="" />
+                                    text="1. Общие положения"
+                                    margin="20px"
+                                    color="#514F4F"
+                                    fontSize=""
+                                    className="large-adapted-text-gray"
+                                />
 
                                 <HeavyTextGray
                                     text='1.1. Настоящая Политика конфиденциальности (далее — Политика) определяет порядок обработки и защиты информации о физических лицах (далее — Пользователи), использующих услуги и информацию, размещенные на сайте автосервиса "Автобокс18" (далее — Сайт).'
-                                    margin="20px" color="#514F4F"
-                                    fontSize="" />
+                                    margin="20px"
+                                    color="#514F4F"
+                                    fontSize=""
+                                    className="large-adapted-text-gray"
+                                />
 
                                 <HeavyTextGray
-                                    text='1.2. Целью настоящей Политики является обеспечение надлежащей защиты информации о Пользователях, включая их персональные данные, от несанкционированного доступа и разглашения.'
-                                    margin="20px" color="#514F4F"
-                                    fontSize="" />
+                                    text="1.2. Целью настоящей Политики является обеспечение надлежащей защиты информации о Пользователях, включая их персональные данные, от несанкционированного доступа и разглашения."
+                                    margin="20px"
+                                    color="#514F4F"
+                                    fontSize=""
+                                    className="large-adapted-text-gray"
+                                />
 
                                 <HeavyTextGray
-                                    text='1.3. Отношения, связанные с обработкой персональных данных, регулируются настоящей Политикой, а также действующим законодательством Российской Федерации в области защиты персональных данных.'
-                                    margin="20px" color="#514F4F"
-                                    fontSize="" />
+                                    text="1.3. Отношения, связанные с обработкой персональных данных, регулируются настоящей Политикой, а также действующим законодательством Российской Федерации в области защиты персональных данных."
+                                    margin="20px"
+                                    color="#514F4F"
+                                    fontSize=""
+                                    className="large-adapted-text-gray"
+                                />
 
                                 <HeavyTextGray
-                                    text='1.4. Использование Сайта означает согласие Пользователя с настоящей Политикой и условиями обработки его персональных данных.'
-                                    margin="20px" color="#514F4F"
-                                    fontSize="" />
+                                    text="1.4. Использование Сайта означает согласие Пользователя с настоящей Политикой и условиями обработки его персональных данных."
+                                    margin="20px"
+                                    color="#514F4F"
+                                    fontSize=""
+                                    className="large-adapted-text-gray"
+                                />
 
                                 <HeavyTextGray
-                                    text='2. Сбор и использование персональных данных'
-                                    margin="20px" color="#514F4F"
-                                    fontSize="" />
+                                    text="2. Сбор и использование персональных данных"
+                                    margin="20px"
+                                    color="#514F4F"
+                                    fontSize=""
+                                    className="large-adapted-text-gray"
+                                />
 
                                 <HeavyTextGray
-                                    text='2.1. Под персональными данными понимается любая информация, относящаяся к прямо или косвенно определенному или определяемому физическому лицу (субъекту персональных данных).'
-                                    margin="20px" color="#514F4F"
-                                    fontSize="" />
+                                    text="2.1. Под персональными данными понимается любая информация, относящаяся к прямо или косвенно определенному или определяемому физическому лицу (субъекту персональных данных)."
+                                    margin="20px"
+                                    color="#514F4F"
+                                    fontSize=""
+                                    className="large-adapted-text-gray"
+                                />
 
                                 <HeavyTextGray
-                                    text='2.2. Персональные данные Пользователей включают в себя, но не ограничиваются следующей информацией:
+                                    className="large-adapted-text-gray"
+                                    text="2.2. Персональные данные Пользователей включают в себя, но не ограничиваются следующей информацией:
 Фамилия, имя, отчество;
 Контактный телефон;
 Адрес электронной почты;
-Почтовый адрес.'
-                                    margin="20px" color="#514F4F"
-                                    fontSize="" />
+Почтовый адрес."
+                                    margin="20px"
+                                    color="#514F4F"
+                                    
+                                />
 
-<HeavyTextGray
-                                    text='2.3. Персональные данные собираются исключительно с согласия. '
-                                    margin="20px" color="#514F4F"
-                                    fontSize="" />
+                                <HeavyTextGray
+                                    text="2.3. Персональные данные собираются исключительно с согласия. "
+                                    margin="20px"
+                                    color="#514F4F"
+                                    fontSize="" className="large-adapted-text-gray"
+                                />
 
-<HeavyTextGray
-                                    text='2.4. Персональные данные Пользователей используются для следующих целей:
+                                <HeavyTextGray
+                                    text="2.4. Персональные данные Пользователей используются для следующих целей:
 Предоставление услуг автосервиса;
 Обработка заказов Пользователей и выполнение обязательств перед Пользователями;
 Улучшение качества обслуживания и доработки Сайта;
-Информирование Пользователей о новостях, акциях и специальных предложениях.'
-                                    margin="20px" color="#514F4F"
-                                    fontSize="" />
-
-
-
-
-
-
+Информирование Пользователей о новостях, акциях и специальных предложениях."
+                                    margin="20px"
+                                    color="#514F4F"
+                                    fontSize=""
+                                    className="large-adapted-text-gray"
+                                />
                             </div>
-
                         </div>
-
                     </div>
                 </div>
             </main>
@@ -109,7 +137,7 @@ const PrivacyPolicy = () => {
                 <Footer />
             </footer>
         </React.Fragment>
-    )
-}
+    );
+};
 
 export default PrivacyPolicy;

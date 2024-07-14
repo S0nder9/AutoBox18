@@ -30,8 +30,8 @@ return (
        
         <div className={styles.mainContainer}>
         
-          <div className="centered">
-            <p className="textGrayHeavy" style={{ margin: "0 0 80px 0" }}>
+          <div className={styles.centeredDiv}>
+            <p className="textGrayHeavy" style={{ margin: "0 0 80px 0" }} id = {styles.textForCenteredDiv}>
               {data[id].Title}
 
             </p>
