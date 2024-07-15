@@ -28,7 +28,8 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "build-github": "HASH_ROUTER=true webpack"
   },
   "eslintConfig": {
     "extends": [
