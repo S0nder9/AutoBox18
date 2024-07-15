@@ -1,7 +1,7 @@
 {
-  "name": "autobox",
+  "name": "autobox18",
   "version": "0.1.0",
-  "homepage": "https://s0nder9.github.io/AutoBox18/public/",
+  "homepage": "https://s0nder9.github.io/Main",
   "private": false,
   "dependencies": {
     "@react-google-maps/api": "^2.19.3",
