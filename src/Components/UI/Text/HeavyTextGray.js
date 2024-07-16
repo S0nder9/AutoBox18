@@ -1,7 +1,7 @@
-import React, { useEffect } from "react";
+import React, { forwardRef, useEffect } from "react";
 import styles from "./HeavyTextGray.module.css";
 
-const HeavyTextGray = (props) => {
+const HeavyTextGray = forwardRef((props, ref) => {
     const fontSize = props.fontSize || "30px";
     const color = props.color || "white";
     const className = props.className || "HeavyTextGray";
@@ -9,6 +9,7 @@ const HeavyTextGray = (props) => {
 
     return (
         <p
+        ref={ref}
             className={className}
             style={{
                 fontSize: fontSize,
@@ -17,6 +18,6 @@ const HeavyTextGray = (props) => {
             }}
         >{props.text}</p>
     );
-}
+});
 
 export default HeavyTextGray;

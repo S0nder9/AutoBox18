@@ -1,6 +1,6 @@
-import React from "react";
+import React, { forwardRef } from "react";
 
-const HeavyText = (props) => {
+const HeavyText = forwardRef((props, ref) => {
     const fontSize = props.fontSize || "30px";
     const color = props.color || "white";
     const className = props.className || "HeavyText";
@@ -9,6 +9,7 @@ const HeavyText = (props) => {
 
     return (
         <p
+        ref={ref}
             className={className}
             style={{
                 fontSize: fontSize,
@@ -17,6 +18,6 @@ const HeavyText = (props) => {
             }}
         >{props.text}</p>
     );
-}
+});
 
 export default HeavyText;

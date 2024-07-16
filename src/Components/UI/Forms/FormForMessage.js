@@ -204,12 +204,9 @@ const FormForMessage = ({ display }) => {
                         checked={isChecked}
                         onChange={handleCheckboxChange}
                     />
-                    <label htmlFor="privacy" className={styles.privacyText}>
-                        согласен с{" "}
-                        <Link to="/privacyPolicy">
-                            <span className={styles.spanColor}>
-                                политикой конфиденциальности *
-                            </span>
+                   <label htmlFor="privacy" className={styles.privacyText}>
+                        согласен с <Link to="/privacyPolicy">
+                            <span className={styles.spanColor}>политикой конфиденциальности *</span>
                         </Link>
                     </label>
                 </div>
