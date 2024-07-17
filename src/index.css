@@ -12,6 +12,11 @@
   font-family: 'Roboto-Black', sans-serif;
 }
 
+html, body {
+  overflow-x: hidden;
+}
+
+
 a {
   text-decoration: none;
 }
@@ -769,3 +774,4 @@ li {
 } */
 
 /* appearance animation */
+
