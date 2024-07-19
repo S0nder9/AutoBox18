@@ -24,3 +24,12 @@
     padding: 10px;
     cursor: pointer;
 }
+
+@media (max-width: 500px) {
+    .entry {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+}

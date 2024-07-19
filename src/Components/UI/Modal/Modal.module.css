@@ -8,6 +8,7 @@
     justify-content: center;
     align-items: center;
     z-index: 11;
+    margin: 5px;
 }
 
 .modalContent {
@@ -75,8 +76,43 @@
     }
 }
 
-@media (max-width: 5) {
+@media (max-width: 500px) {
+    .tabContainer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin: 20px 0 0 0;
+    }
+
     .tabButton {
         font-size: 15px;
     }
+}
+
+@media (max-width: 350px) {
+    .closeButton {
+        position: absolute;
+        top: 10px;
+        right: 50px;
+        background: none;
+        border: none;
+        font-size: 30px;
+        cursor: pointer;
+    }
+    
+}
+
+
+@media (max-width: 240px) {
+    .closeButton {
+        position: absolute;
+        top: 10px;
+        right: 100px;
+        background: none;
+        border: none;
+        font-size: 30px;
+        cursor: pointer;
+    }
+    
 }

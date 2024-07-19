@@ -171,6 +171,18 @@ li {
 .input:focus {
   border: 2px solid grey;
 }
+
+@media (max-width: 500px) {
+  .input {
+      width: 100%;
+  }
+}
+
+@media (max-width: 340px) {
+  .input {
+      width: 60%;
+  }
+}
 /* Styles for Input */
 
 

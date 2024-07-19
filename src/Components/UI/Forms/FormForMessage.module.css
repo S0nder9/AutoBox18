@@ -78,4 +78,13 @@
     .privacyText {
         font-size: 14px;
     }
+
+    .privacyContainer {
+        display: block;
+        text-align: center;
+    }
+
+    .input {
+        width: 100% !important;
+    }
 }

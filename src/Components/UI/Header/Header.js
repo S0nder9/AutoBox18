@@ -12,7 +12,6 @@ const Header = () => {
 
     const toggleBurgerMenu = () => {
         setIsOpen((prev) => !prev);
-        console.log(isOpen);
     };
 
     return (
@@ -106,47 +105,36 @@ const Header = () => {
                     <div className={styles.toggleInfo}>
                         <div className={styles.toggleInfoMain}>
                             <div className={styles.wrapperForWindow}>
-                            <Link to="/main">
-                        <Logo />
-                    </Link>
+                                <Link to="/main">
+                                    <Logo />
+                                </Link>
 
-                    <Link to="/pricesAndServices">
-                        <button
-                            className={
-                                "buttonHover"
-                            }
-                        >
-                            цены и услуги
-                        </button>
-                    </Link>
+                                <Link to="/pricesAndServices">
+                                    <button className={"buttonHover"}>
+                                        цены и услуги
+                                    </button>
+                                </Link>
 
-                    <a
-                        href="http://xn--18-6kcipah3a9amjv.xn--p1ai/novosti/my-otkryli-avtoservis"
-                        target="_blank"
-                    >
-                        <button
-                            className={
-                               "buttonHover"
-                            }
-                        >
-                            запчасти
-                        </button>
-                    </a>
+                                <a
+                                    href="http://xn--18-6kcipah3a9amjv.xn--p1ai/novosti/my-otkryli-avtoservis"
+                                    target="_blank"
+                                >
+                                    <button className={"buttonHover"}>
+                                        запчасти
+                                    </button>
+                                </a>
 
-                    <Link to="/contacts">
-                        <button
-                            className={
-                                 "buttonHover"
-                            }
+                                <Link to="/contacts">
+                                    <button
+                                        className={"buttonHover"}
+                                        style={{ fontSize: "30px !important" }}
+                                    >
+                                        контакты
+                                    </button>
+                                </Link>
 
-                            style={{fontSize: "30px !important"}}
-                        >
-                            контакты
-                        </button>
-                    </Link>
-
-                    <Enrol text="Записаться"/>
-                                <SocialIcons/>
+                                <Enrol text="Записаться" />
+                                <SocialIcons />
                             </div>
                         </div>
                     </div>

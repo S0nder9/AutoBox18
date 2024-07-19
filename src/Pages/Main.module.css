@@ -54,3 +54,12 @@
         flex-direction: column-reverse
     }
 }
+
+@media (max-width: 500px) {
+    .enrolsPosition {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 25px;
+    }
+}
