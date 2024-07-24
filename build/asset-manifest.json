@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/AutoBox18/static/css/main.adc04302.css",
+    "main.js": "/AutoBox18/static/js/main.a5cc4ca0.js",
+    "static/media/Фото на главном меню.png": "/AutoBox18/static/media/Фото на главном меню.16ccdaeabaf72863b150.png",
+    "static/media/Для карточки 2.png": "/AutoBox18/static/media/Для карточки 2.d27f9269c713689c3522.png",
+    "static/media/Для карточки 3.png": "/AutoBox18/static/media/Для карточки 3.deabb295b4a26d2883b7.png",
+    "static/media/Для карточки 4.png": "/AutoBox18/static/media/Для карточки 4.d8b359b44d9adaa51cf7.png",
+    "static/media/Цены и услуги.png": "/AutoBox18/static/media/Цены и услуги.05325fc36c6119c73f1b.png",
+    "static/media/Контакты.png": "/AutoBox18/static/media/Контакты.27e04f31b062649a4cdc.png",
+    "static/media/Фото на главном меню 2.png": "/AutoBox18/static/media/Фото на главном меню 2.af9d5278fa69fc8a4e9c.png",
+    "static/media/Для карточки 1.png": "/AutoBox18/static/media/Для карточки 1.8168dbbd015cb4ae2cf5.png",
+    "static/media/Фото сервиса.jpg": "/AutoBox18/static/media/Фото сервиса.4a5390ed26966a50bab5.jpg",
+    "static/media/Roboto-Black.ttf": "/AutoBox18/static/media/Roboto-Black.cf56c1b149d0a5e8d7c6.ttf",
+    "static/media/LogoOrange.png": "/AutoBox18/static/media/LogoOrange.e25bcdf6d5f20e4632fe.png",
+    "index.html": "/AutoBox18/index.html",
+    "main.adc04302.css.map": "/AutoBox18/static/css/main.adc04302.css.map",
+    "main.a5cc4ca0.js.map": "/AutoBox18/static/js/main.a5cc4ca0.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.adc04302.css",
+    "static/js/main.a5cc4ca0.js"
+  ]
+}
