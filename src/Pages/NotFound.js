@@ -4,7 +4,6 @@ import BackgroundImgContainer from "../Components/UI/Background Img container/Ba
 import MainImgForContacts from "../Images/ImportantImages/Контакты.png";
 import HeaderUpper from "../Components/UI/Header/HeaderUpper";
 import Header from "../Components/UI/Header/Header";
-import HeavyTextGray from "../Components/UI/Text/HeavyTextGray";
 import ErrorPopup from "../Components/UI/ErrorGroup/ErrorPopup";
 
 const NotFound = () => {
