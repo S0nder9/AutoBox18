@@ -9,10 +9,11 @@ import Footer from "../Components/UI/Footer/Footer";
 import styles from "./Contacts.module.css"
 import useLeafletMap from "../Hooks/useLeafletMap";
 import logoIcon from "../Images/ImportantImages/LogoOrange.png";
-import useAnim from "../Animations/useAnim";
+import useAnim from "../Animations/useAnim";import obj_with_constants from "../Helper/constants";
+
 
 const Contacts = () => {
-    const center = [56.828478, 53.200163];
+    const center = obj_with_constants.COORDINATES;
     const zoom = 13;
     const height = "50vh";
     const width = "90%";

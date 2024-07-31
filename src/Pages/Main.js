@@ -15,12 +15,13 @@ import CardImg2 from "../Images/ImportantImages/Для карточки 2.png";
 import CardImg3 from "../Images/ImportantImages/Для карточки 3.png";
 import CardImg4 from "../Images/ImportantImages/Для карточки 4.png";
 import MainImg2 from "../Images/ImportantImages/Фото на главном меню 2.png";
-import AutoBox18Photo from "../Images/ImportantImages/Фото сервиса.jpg";
+import AutoBox18Photo from "../Images/ImportantImages/Фото сервиса 1.jpg";
 import useLeafletMap from "../Hooks/useLeafletMap";
 import useAnim from "../Animations/useAnim";
+import obj_with_constants from "../Helper/constants";
 
 function Main() {
-    const center = [56.828478, 53.200163];
+    const center = obj_with_constants.COORDINATES;
     const zoom = 13;
     const height = "50vh";
     const width = "100%";
