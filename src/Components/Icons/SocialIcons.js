@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./SocialIcons.module.css";
+import obj_with_constants from "../../Helper/constants";
 
 const SocialIcons = (props) => {
     const display = props.display || "flex";
@@ -10,16 +11,16 @@ const SocialIcons = (props) => {
             display: display,
             justifyContent: justifyContent
         }}>
-            <a href="tel:+83412567615" className={styles.iconLink}>
+            <a href={`tel:+${obj_with_constants.PHONENUMBER1}`} className={styles.iconLink}>
                 <box-icon type='solid' name='phone-call' color='white' size='32px'/>
             </a>
-            <a href="https://t.me/yourusername" className={styles.iconLink} target="_blank" rel="noopener noreferrer">
+            <a href={obj_with_constants.TG} className={styles.iconLink} target="_blank" rel="noopener noreferrer">
                 <box-icon name='telegram' type='logo' color='white' size='32px'/>
             </a>
-            <a href="mailto:your-email@example.com" className={styles.iconLink}>
+            <a href={obj_with_constants.MAIL} className={styles.iconLink}>
                 <box-icon name='envelope' type='solid' color='white' size='32px'/>
             </a>
-            <a href="https://www.google.com/maps/place/Маяковского,+11" className={styles.iconLink} target="_blank" rel="noopener noreferrer">
+            <a href={obj_with_constants.REF} className={styles.iconLink} target="_blank" rel="noopener noreferrer">
                 <box-icon name='location-plus' type='solid' color='white' size='32px'/>
             </a>
         </div>

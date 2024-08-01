@@ -97,26 +97,26 @@ const Contacts = () => {
                                 <a href="tel:+83412567615">
                                     <box-icon type='solid' name='phone-call' color='#FF5C00' size='32px' />
                                 </a>
-                                <p className={styles.textGrayMain}>8(3412)56-76-15</p>
+                                <p className={styles.textGrayMain}>{`${obj_with_constants.PHONENUMBER1}, ${obj_with_constants.PHONENUMBER2}`}</p>
                             </div>
 
                             <div className={styles.iconWhithText}  ref={animRef2}>
                                 <a href="https://www.google.com/maps/place/Маяковского,+11"  target="_blank" rel="noopener noreferrer">
                                     <box-icon name='location-plus' type='solid' color='#FF5C00' size='32px' />
                                 </a>
-                                <p className={styles.textGrayMain}>Маяковского, 11</p>
+                                <p className={styles.textGrayMain}>{obj_with_constants.ADDRESS}</p>
                             </div>
 
                             <div className={styles.iconWhithText}  ref={animRef3}>    
                             <box-icon type='solid' name='time' color='#FF5C00' size='32px'></box-icon>
-                            <p className={styles.textGrayMain}>Пн-Пт - 9:00 до 19: 00</p>
+                            <p className={styles.textGrayMain}>{obj_with_constants.SCHEDULE}</p>
                             </div>
 
                             <div className={styles.iconWhithText}  ref={animRef4}>
                                 <a href="mailto:your-email@example.com" >
                                     <box-icon name='envelope' type='solid' color='#FF5C00' size='32px' />
                                 </a>
-                                <p className={styles.textGrayMain}>your-email@example.com</p>
+                                <p className={styles.textGrayMain}>{obj_with_constants.MAIL}</p>
                             </div>
                         </div>
                     </div>

@@ -6,6 +6,7 @@ import { Link } from "react-router-dom/cjs/react-router-dom.min";
 import useExchangeBuffer from "../../../Hooks/useExchangeBuffer";
 import SuccessPopup from "../ErrorGroup/SuccessPopup";
 import ErrorPopup from "../ErrorGroup/ErrorPopup";
+import obj_with_constants from "../../../Helper/constants";
 
 const Footer = () => {
     const { handleCopy, textSuccess, textError, forPopupState } = useExchangeBuffer();
@@ -52,19 +53,19 @@ const Footer = () => {
                     <br />
                     <div className={styles.crossWhithText} onClick={handleCopy}>
                         <box-icon name='x' color="#FF5C00" />
-                        <p className="textWhiteSmall">АДРЕС: г. Ижевск, ул. Автосервисная, д. 18</p>
+                        <p className="textWhiteSmall">{`АДРЕС: ${obj_with_constants.ADDRESS}`}</p>
                     </div>
                     <div className={styles.crossWhithText} onClick={handleCopy}>
                         <box-icon name='x' color="#FF5C00" />
-                        <p className="textWhiteSmall">ТЕЛЕФОН: +7 (3412) 123-456</p>
+                        <p className="textWhiteSmall">{`ТЕЛЕФОН: ${obj_with_constants.PHONENUMBER1}, ${obj_with_constants.PHONENUMBER2}`}</p>
                     </div>
                     <div className={styles.crossWhithText} onClick={handleCopy}>
                         <box-icon name='x' color="#FF5C00" />
-                        <p className="textWhiteSmall">Время работы: Пн-Пт: 9:00 - 18:00, Сб-Вс: выходные</p>
+                        <p className="textWhiteSmall">{`ВРЕМЯ РАБОТЫ: ${obj_with_constants.SCHEDULE}`}</p>
                     </div>
                     <div className={styles.crossWhithText} onClick={handleCopy}>
                         <box-icon name='x' color="#FF5C00" />
-                        <p className="textWhiteSmall">ПОЧТА: info@autobox18.ru</p>
+                        <p className="textWhiteSmall">{`ПОЧТА: ${obj_with_constants.MAIL}`}</p>
                     </div>
                 </div>
 
