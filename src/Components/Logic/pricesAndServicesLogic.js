@@ -10,6 +10,7 @@ import useHttp from "../../Hooks/useHttp";
 import Loading from "../UI/LoadingGroup/Loading";
 import ErrorPopup from "../UI/ErrorGroup/ErrorPopup";
 
+
 const PricesAndServicesLogic = () => {
   const { data, loader, error } = useHttp(
     "https://autobox18-ba317-default-rtdb.firebaseio.com/logicPricesAndServices.json",
