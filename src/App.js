@@ -9,7 +9,7 @@ import NotFound from "./Pages/NotFound";
 
 function App() {
   return (
-    <Switch>
+    <Switch basenaem = "/AutoBox18">
       <Route exact path="/">
         <Redirect to="/main" />
       </Route>
