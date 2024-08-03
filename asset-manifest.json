@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/static/css/main.2738c096.css",
-    "main.js": "/static/js/main.1c787ca4.js",
-    "static/media/Фото на главном меню.png": "/static/media/Фото на главном меню.16ccdaeabaf72863b150.png",
-    "static/media/Для карточки 2.png": "/static/media/Для карточки 2.d27f9269c713689c3522.png",
-    "static/media/Для карточки 3.png": "/static/media/Для карточки 3.deabb295b4a26d2883b7.png",
-    "static/media/Для карточки 4.png": "/static/media/Для карточки 4.d8b359b44d9adaa51cf7.png",
-    "static/media/Цены и услуги.png": "/static/media/Цены и услуги.05325fc36c6119c73f1b.png",
-    "static/media/Контакты.png": "/static/media/Контакты.27e04f31b062649a4cdc.png",
-    "static/media/Фото на главном меню 2.png": "/static/media/Фото на главном меню 2.af9d5278fa69fc8a4e9c.png",
-    "static/media/Для карточки 1.png": "/static/media/Для карточки 1.8168dbbd015cb4ae2cf5.png",
-    "static/media/Фото сервиса.jpg": "/static/media/Фото сервиса.4a5390ed26966a50bab5.jpg",
-    "static/media/Roboto-Black.ttf": "/static/media/Roboto-Black.cf56c1b149d0a5e8d7c6.ttf",
-    "static/media/LogoOrange.png": "/static/media/LogoOrange.e25bcdf6d5f20e4632fe.png",
-    "index.html": "/index.html",
-    "main.2738c096.css.map": "/static/css/main.2738c096.css.map",
-    "main.1c787ca4.js.map": "/static/js/main.1c787ca4.js.map"
+    "main.css": "/main/static/css/main.f31ce960.css",
+    "main.js": "/main/static/js/main.f5ab3843.js",
+    "static/media/Фото на главном меню.png": "/main/static/media/Фото на главном меню.16ccdaeabaf72863b150.png",
+    "static/media/Для карточки 2.png": "/main/static/media/Для карточки 2.d27f9269c713689c3522.png",
+    "static/media/Для карточки 3.png": "/main/static/media/Для карточки 3.deabb295b4a26d2883b7.png",
+    "static/media/Для карточки 4.png": "/main/static/media/Для карточки 4.d8b359b44d9adaa51cf7.png",
+    "static/media/Цены и услуги.png": "/main/static/media/Цены и услуги.05325fc36c6119c73f1b.png",
+    "static/media/Контакты.png": "/main/static/media/Контакты.27e04f31b062649a4cdc.png",
+    "static/media/Фото на главном меню 2.png": "/main/static/media/Фото на главном меню 2.af9d5278fa69fc8a4e9c.png",
+    "static/media/Для карточки 1.png": "/main/static/media/Для карточки 1.8168dbbd015cb4ae2cf5.png",
+    "static/media/Фото сервиса 1.jpg": "/main/static/media/Фото сервиса 1.3d6f1fdb7dd19bbeb87e.jpg",
+    "static/media/Roboto-Black.ttf": "/main/static/media/Roboto-Black.cf56c1b149d0a5e8d7c6.ttf",
+    "static/media/LogoOrange.png": "/main/static/media/LogoOrange.e25bcdf6d5f20e4632fe.png",
+    "index.html": "/main/index.html",
+    "main.f31ce960.css.map": "/main/static/css/main.f31ce960.css.map",
+    "main.f5ab3843.js.map": "/main/static/js/main.f5ab3843.js.map"
   },
   "entrypoints": [
-    "static/css/main.2738c096.css",
-    "static/js/main.1c787ca4.js"
+    "static/css/main.f31ce960.css",
+    "static/js/main.f5ab3843.js"
   ]
 }
