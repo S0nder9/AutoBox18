@@ -32,4 +32,11 @@
         align-items: center;
         gap: 10px;
     }
+
+    .footerContainer {
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        gap: 20px;
+    }
 }
